@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Zdam Prawo Jazdy — Łomża</title>
+<meta name="theme-color" content="#6C4A9E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Prawko">
+<link rel="manifest" href='data:application/manifest+json,{"name":"Zdam Prawo Jazdy — Łomża","short_name":"Prawko","start_url":".","display":"standalone","background_color":"%23FAF8FC","theme_color":"%236C4A9E"}'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="%236C4A9E"/><text x="50" y="72" font-size="58" text-anchor="middle">🚗</text></svg>'>
+<link rel="apple-touch-icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%236C4A9E"/><text x="50" y="72" font-size="58" text-anchor="middle">🚗</text></svg>'>
+<style>
+:root{
+  --heather:#6C4A9E; --heather-d:#4E3379; --heather-soft:#F2ECF9;
+  --green:#18B45A; --green-d:#0E8A42; --green-soft:#E2FAEC;
+  --peach:#FF9566; --peach-d:#D9562B; --peach-soft:#FFF0E7;
+  --orange:#FFAE52; --orange-soft:#FFF5E6;
+  --primary:var(--heather); --primary-dark:var(--heather-d); --primary-soft:var(--heather-soft);
+  --bg:#F7F4FB; --card:#ffffff; --text:#2A2140; --sub:#6E6683; --border:#ECE6F5;
+  --good:var(--green); --good-bg:var(--green-soft); --med:var(--peach-d); --med-bg:var(--peach-soft);
+  --bad:var(--peach-d); --bad-bg:var(--peach-soft);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);line-height:1.5;padding-bottom:82px}
+header{background:linear-gradient(120deg,#6C4A9E 0%,#8A5FB8 42%,#18B45A 105%);color:#fff;padding:18px 16px 22px;text-align:center}
+header h1{font-size:1.15rem;letter-spacing:.2px}
+header p{font-size:.78rem;opacity:.92;margin-top:2px}
+.wrap{max-width:560px;margin:0 auto;padding:14px}
+.tab{display:none}
+.tab.active{display:block;animation:rise .26s cubic-bezier(.22,.8,.3,1)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card{background:var(--card);border-radius:18px;padding:18px;margin-bottom:14px;border:1px solid var(--border);box-shadow:0 1px 2px rgba(58,32,110,.04),0 8px 24px -12px rgba(58,32,110,.16)}
+h2{font-size:.98rem;font-weight:750;letter-spacing:-.15px;color:var(--heather-d);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+h3{font-size:.88rem;font-weight:700;margin:16px 0 7px;color:var(--heather-d)}
+p.note{font-size:.79rem;color:var(--sub);margin-bottom:11px}
+.fg{margin-bottom:13px}
+label{display:block;font-size:.81rem;font-weight:650;margin-bottom:6px;color:var(--text)}
+input,select,textarea{width:100%;padding:12px 13px;border:1.5px solid var(--border);border-radius:13px;font-size:.9rem;background:#FCFBFE;color:var(--text);font-family:inherit;transition:border-color .15s,box-shadow .15s,background .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--heather);background:#fff;box-shadow:0 0 0 4px rgba(108,74,158,.13)}
+textarea{resize:vertical;min-height:62px}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.btn-r{padding:10px 6px;border:1.5px solid var(--border);border-radius:13px;background:#fff;font-size:.74rem;font-weight:650;text-align:center;cursor:pointer;color:var(--sub);transition:transform .12s,background .15s,border-color .15s,color .15s}
+.btn-r:active{transform:scale(.97)}
+.btn-r.g{background:var(--green-soft);border-color:var(--green);color:var(--green-d)}
+.btn-r.m{background:var(--peach-soft);border-color:var(--peach);color:var(--peach-d)}
+.btn-r.b{background:var(--peach-soft);border-color:var(--peach-d);color:var(--peach-d)}
+.btn-main{width:100%;padding:14px;background:linear-gradient(120deg,#6C4A9E,#8358B9);color:#fff;border:none;border-radius:14px;font-weight:750;font-size:.94rem;cursor:pointer;font-family:inherit;box-shadow:0 8px 20px -10px rgba(108,74,158,.85);transition:transform .12s,filter .15s}
+.btn-main:active{transform:scale(.98);filter:brightness(1.05)}
+.btn-ghost{width:100%;padding:12px;background:#fff;color:var(--heather-d);border:1.5px solid var(--border);border-radius:14px;font-weight:650;font-size:.87rem;cursor:pointer;margin-top:9px;font-family:inherit;transition:background .15s}
+.btn-ghost:active{background:var(--heather-soft)}
+.btn-sm{padding:10px 14px;border-radius:12px;border:1.5px solid var(--border);background:#fff;color:var(--heather-d);font-weight:650;font-size:.82rem;cursor:pointer;font-family:inherit;transition:background .15s,transform .12s}
+.btn-sm:active{transform:scale(.97)}
+.btn-sm.fill{background:linear-gradient(120deg,#6C4A9E,#8358B9);color:#fff;border-color:transparent}
+.entry{border-bottom:1px solid var(--border);padding:13px 0}
+.entry:last-child{border-bottom:none;padding-bottom:4px}
+.entry-top{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;font-weight:700;gap:9px}
+.badge{font-size:.68rem;padding:4px 10px;border-radius:20px;font-weight:700;white-space:nowrap}
+.bg-g{background:var(--green-soft);color:var(--green-d)}
+.bg-m{background:var(--peach-soft);color:var(--peach-d)}
+.bg-b{background:var(--peach-soft);color:var(--peach-d)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:.67rem;font-weight:600;padding:4px 9px;border-radius:9px;background:var(--heather-soft);color:var(--heather-d)}
+.chip.b{background:var(--peach-soft);color:var(--peach-d)}
+.chip.m{background:var(--orange-soft);color:#8A4A12}
+.mt{font-size:.76rem;color:var(--sub);margin-top:6px;white-space:pre-wrap}
+.pill{display:inline-block;font-size:.71rem;font-weight:650;padding:7px 13px;border-radius:20px;margin:0 5px 6px 0;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--sub);transition:background .15s,border-color .15s,color .15s,transform .12s}
+.pill:active{transform:scale(.96)}
+.pill.on{background:var(--heather-soft);border-color:var(--heather);color:var(--heather-d)}
+.pill.hot.on{background:var(--peach-soft);border-color:var(--peach);color:var(--peach-d)}
+.pill.cool.on{background:var(--green-soft);border-color:var(--green);color:var(--green-d)}
+.stat{flex:1;text-align:center;background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px 8px;box-shadow:0 1px 2px rgba(58,32,110,.04),0 8px 24px -12px rgba(58,32,110,.16)}
+.stat b{display:block;font-size:1.15rem;font-weight:780;letter-spacing:-.4px;color:var(--heather-d)}
+.stat span{font-size:.63rem;color:var(--sub);display:block;margin-top:3px;line-height:1.3}
+.stats{display:flex;gap:9px;margin-bottom:14px}
+.err-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:.81rem}
+.err-row:last-child{border-bottom:none}
+.cnt{display:flex;align-items:center;gap:8px}
+.cnt button{width:30px;height:30px;border-radius:10px;border:1.5px solid var(--border);background:#fff;color:var(--heather-d);font-weight:800;font-size:.95rem;line-height:1;cursor:pointer;transition:background .15s,transform .1s}
+.cnt button:active{transform:scale(.9);background:var(--heather-soft)}
+.cnt b{min-width:20px;text-align:center;font-size:.86rem;font-weight:750}
+.subblock{border:1.5px solid var(--border);border-radius:16px;padding:14px;margin-bottom:11px;background:#fff}
+.subblock > .t{font-size:.82rem;font-weight:750;color:var(--heather-d);margin-bottom:9px}
+.quiz{background:linear-gradient(180deg,#FAF7FE,#FFF);border:1px solid var(--border);border-radius:16px;padding:15px;margin-bottom:12px;box-shadow:0 1px 2px rgba(58,32,110,.04),0 8px 24px -12px rgba(58,32,110,.16)}
+.q{font-size:.87rem;font-weight:680;margin-bottom:11px;line-height:1.5}
+.opt{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:12px 13px;font-size:.83rem;margin-bottom:7px;cursor:pointer;transition:background .15s,border-color .15s,transform .12s}
+.opt:active{transform:scale(.99)}
+.opt.ok{background:var(--green-soft);border-color:var(--green);font-weight:650}
+.opt.no{background:var(--peach-soft);border-color:var(--peach-d)}
+.fb{margin-top:9px;padding:11px 13px;border-radius:12px;font-size:.79rem;display:none}
+.fb.correct{display:block;background:var(--green-soft);color:#0A5A2C}
+.fb.incorrect{display:block;background:var(--peach-soft);color:#8A3812}
+.chips-filter{display:flex;gap:7px;overflow-x:auto;margin:0 -18px 14px;padding:2px 18px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chips-filter::-webkit-scrollbar{display:none}
+.fchip{flex:0 0 auto;font-size:.73rem;font-weight:650;padding:8px 13px;border-radius:20px;background:#fff;border:1.5px solid var(--border);color:var(--sub);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.fchip.on{background:linear-gradient(120deg,#6C4A9E,#8358B9);border-color:transparent;color:#fff}
+.task{background:#fff;border:1px solid var(--border);border-radius:6px 16px 16px 6px;padding:15px;margin-bottom:11px;border-left:4px solid var(--green);box-shadow:0 1px 2px rgba(58,32,110,.04),0 8px 24px -12px rgba(58,32,110,.16)}
+.task h4{font-size:.86rem;font-weight:700;margin-bottom:6px}
+.task p{font-size:.79rem;color:#3A3055}
+.task .why{font-size:.73rem;color:var(--sub);margin-top:9px;border-top:1px dashed var(--border);padding-top:9px}
+.task .do{font-size:.79rem;margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--orange-soft);color:#8A4A12;font-weight:650}
+.timer-box{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.big{font-size:2.1rem;font-weight:800;letter-spacing:-1.5px;color:var(--heather-d);font-variant-numeric:tabular-nums}
+.gauge{height:11px;border-radius:8px;background:var(--border);overflow:hidden;margin-top:12px}
+.gauge>div{height:100%;background:linear-gradient(90deg,#FF9566,#FFAE52,#18B45A);width:0%;border-radius:8px;transition:width .45s cubic-bezier(.3,.9,.3,1)}
+.sign-card{text-align:center;padding:14px 0 6px}
+.sign-card svg{width:136px;height:136px;display:block;margin:0 auto 10px;filter:drop-shadow(0 8px 18px rgba(58,32,110,.14))}
+.sign-answers .opt{text-align:center}
+.rules ul{padding-left:19px;font-size:.82rem;color:#3A3055}
+.rules li{margin-bottom:5px}
+.box{background:var(--heather-soft);border:1px solid var(--border);border-radius:14px;padding:13px;font-size:.81rem;line-height:1.55;margin-bottom:10px}
+.box.warn{background:var(--orange-soft);border-color:#FFDCAE;color:#8A4A12}
+.box.stop{background:var(--peach-soft);border-color:#FFC9AE;color:#8A3812}
+.box.ok{background:var(--green-soft);border-color:#A6F0C2;color:#0A5A2C}
+.day{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.day:last-child{border-bottom:none}
+.day .d{flex:0 0 66px;font-weight:750;font-size:.77rem;color:var(--heather-d)}
+.day .c{font-size:.8rem;color:#3A3055}
+.day.now{background:linear-gradient(100deg,var(--heather-soft),var(--green-soft));margin:0 -10px;padding:12px 10px;border-radius:14px;border-bottom:none}
+details{border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-bottom:9px;background:#fff}
+summary{font-size:.84rem;font-weight:680;cursor:pointer;color:var(--heather-d);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸ ";color:var(--peach-d);font-weight:800}
+details[open] summary:before{content:"▾ "}
+details p,details ul{font-size:.79rem;color:#3A3055;margin-top:9px}
+details ul{padding-left:17px}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;justify-content:space-around;align-items:flex-end;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border-top:1px solid var(--border)}
+.nb{flex:1;background:none;border:none;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.6rem;color:var(--sub);font-weight:650;cursor:pointer;padding:6px 0;border-radius:12px;font-family:inherit;transition:color .15s,background .15s}
+.nb .ic{font-size:1.15rem;line-height:1;opacity:.75;transition:opacity .15s,transform .18s}
+.nb.active{color:var(--heather-d);background:var(--heather-soft)}
+.nb.active .ic{opacity:1;transform:translateY(-1px) scale(1.06)}
+.empty{text-align:center;font-size:.82rem;color:var(--sub);padding:18px 0}
+.toast{position:fixed;left:50%;bottom:104px;transform:translateX(-50%) translateY(8px);background:rgba(41,33,64,.96);color:#fff;font-size:.82rem;font-weight:600;padding:12px 18px;border-radius:22px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;max-width:90vw;text-align:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (min-width:640px){header{padding:26px 18px 30px;border-radius:0 0 30px 30px}header h1{font-size:1.4rem}.card{padding:20px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🚗 Zdam Prawo Jazdy — Łomża</h1>
+  <p id="headerSub">Dziennik · Ćwiczenia · Znaki · Quiz · Błędy · Ściąga · Plan</p>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ 1. DZIENNIK ============ -->
+  <div id="tab-dziennik" class="tab active">
+    <div class="card">
+      <h2>📝 Zapisz jazdę</h2>
+      <form id="driveForm">
+        <div class="fg"><label for="fDate">Data jazdy</label><input type="date" id="fDate" required></div>
+        <div class="fg"><label for="fHours">Ile godzin / jednostek</label><input type="number" id="fHours" value="2.5" step="0.5" min="0.5" max="6" required></div>
+        <div class="fg">
+          <label>Ogólne odczucie z jazdy</label>
+          <div class="rg" id="overallGrid">
+            <div class="btn-r g" data-v="good">Dobrze</div>
+            <div class="btn-r m" data-v="medium">W miarę</div>
+            <div class="btn-r" data-v="bad">Do poprawy</div>
+          </div>
+        </div>
+
+        <label style="margin-top:6px">Obszary — oceń tylko te, które ćwiczyłaś</label>
+        <div id="skillGrid"></div>
+
+        <div class="subblock">
+          <div class="t">🗣️ Rozmowa z instruktorem</div>
+          <div class="note" style="margin-bottom:8px">Im bardziej się wdawałaś w rozmowę, tym głupsze błędy. Zaznacz, jak było.</div>
+          <div class="seg" id="talkSeg"></div>
+        </div>
+
+        <div class="subblock">
+          <div class="t">⚠️ Błędy — policz, ile razy</div>
+          <div class="note" style="margin-bottom:6px">Stukaj „+”, żeby policzyć każde zdarzenie. Zero zostaw bez zmian.</div>
+          <div id="errGrid"></div>
+        </div>
+
+        <div class="subblock">
+          <div class="t">🚧 Sytuacje nieprzewidziane na drodze</div>
+          <div style="font-size:.78rem;font-weight:600;color:var(--green-d);margin-bottom:6px">✔️ Wybrnęłam z tego</div>
+          <div class="seg" id="sitHandled"></div>
+          <div style="font-size:.78rem;font-weight:600;color:var(--peach-d);margin:10px 0 6px">✖️ Nie wybrnęłam — instruktor musiał reagować</div>
+          <div class="seg" id="sitFailed"></div>
+        </div>
+
+        <div class="subblock">
+          <div class="t">🛞 Jakość jazdy — technika</div>
+          <div class="seg" id="qualGrid"></div>
+        </div>
+
+        <div class="fg"><label for="fRoute">Trasa / gdzie jeździliśmy</label><input type="text" id="fRoute" placeholder="np. okolice WORD, Osiedle Południe"></div>
+        <div class="fg"><label for="fGood">✔️ Moje plusy</label><textarea id="fGood" placeholder="np. ruszanie bez żabki, dobre wyczucie sprzęgła"></textarea></div>
+        <div class="fg"><label for="fMinus" style="color:var(--peach-d)">✖️ Moje minusy — nowe, które wyszły dzisiaj</label><textarea id="fMinus" placeholder="np. nie spojrzałam drugi raz w lewo, gaz za mocno"></textarea></div>
+        <div class="fg"><label for="fBad">Gdzie instruktor musiał podpowiadać</label><textarea id="fBad" placeholder="np. kiedy redukować bieg, gdzie patrzeć"></textarea></div>
+        <div class="fg"><label for="fDesc">📖 Opis / streszczenie sesji</label><textarea id="fDesc" style="min-height:110px" placeholder="Napisz swoimi słowami, jak poszła ta jazda — gdzie jeździliście, co się działo, co Cię zaskoczyło, co czułaś. Im więcej, tym lepiej: z tego wyciągnę, nad czym pracować dalej."></textarea></div>
+        <div class="fg"><label for="fNext">🎯 Cel na następną jazdę</label><textarea id="fNext" placeholder="np. 3× sekwencja LEWO → PRAWO → LEWO"></textarea></div>
+
+        <button type="submit" class="btn-main">Zapisz jazdę i pokaż ćwiczenia</button>
+      </form>
+    </div>
+
+    <div class="card" id="recoCard" style="display:none">
+      <h2>🎯 Ćwiczenia pod Twoje „do poprawy”</h2>
+      <p class="note">Wygenerowane z tego wpisu — pełna lista jest w zakładce <b>Ćwiczenia</b>.</p>
+      <div id="recoList"></div>
+    </div>
+
+    <div class="card">
+      <div class="timer-box">
+        <div>
+          <div id="timerDisp" class="big">00:00</div>
+          <div class="note" style="margin:0">Stoper jazd doszkalających</div>
+        </div>
+        <button class="btn-sm fill" id="btnStart">Start</button>
+        <button class="btn-sm" id="btnReset">Reset</button>
+      </div>
+      <div class="note" id="timerTotal" style="margin-top:8px"></div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Postęp i analiza</h2>
+      <div id="progressBox"></div>
+    </div>
+
+    <div class="card">
+      <h2>📚 Historia jazd</h2>
+      <div id="history"></div>
+      <button class="btn-ghost" id="btnExport">📤 Zapisz kopię danych (plik)</button>
+      <button class="btn-ghost" id="btnImport">📥 Wczytaj kopię danych</button>
+      <button class="btn-ghost" id="btnWipe" style="color:var(--peach-d);border-color:var(--peach-d)">🗑️ Wyczyść wszystko</button>
+      <input type="file" id="fileInput" accept=".json" style="display:none">
+    </div>
+  </div>
+
+  <!-- ============ 2. ĆWICZENIA ============ -->
+  <div id="tab-cwiczenia" class="tab">
+    <div class="card">
+      <h2>🧠 Trening pod Twoje słabe punkty</h2>
+      <p class="note">Zadania sortują się same: to, co w dzienniku zaznaczyłaś jako „do poprawy” albo policzyłaś jako błąd, jest na górze.</p>
+      <div class="chips-filter" id="taskFilters"></div>
+      <label style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:.83rem;margin-bottom:12px">
+        <input type="checkbox" id="onlyWeak" style="width:auto"> pokazuj tylko moje słabe obszary
+      </label>
+      <div id="priorityBand"></div>
+      <div id="taskList"></div>
+    </div>
+  </div>
+
+  <!-- ============ 3. ZNAKI ============ -->
+  <div id="tab-znaki" class="tab">
+    <div class="card">
+      <h2>🚸 Znaki — co to jest i co mam zrobić</h2>
+      <p class="note">Wybierz zakres albo powtórkę z błędów:</p>
+      <div class="chips-filter" id="signFilters"></div>
+      <div class="sign-card">
+        <div id="signSvg"></div>
+        <div style="font-size:.9rem;font-weight:700" id="signPrompt">Co to za znak i co powinnaś zrobić?</div>
+      </div>
+      <div class="sign-answers" id="signAnswers"></div>
+      <div class="fb" id="signFb"></div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="btn-sm" id="signPrev" style="flex:1">◀ Poprzedni</button>
+        <button class="btn-sm fill" id="signHint" style="flex:1">Podpowiedź</button>
+        <button class="btn-sm" id="signNext" style="flex:1">Następny ▶</button>
+      </div>
+      <div class="note" id="signCounter" style="text-align:center;margin-top:8px"></div>
+      <div class="box" id="signReveal" style="display:none"></div>
+    </div>
+    <div class="card">
+      <h2>📏 Limity prędkości — Twoja tabelka</h2>
+      <div id="limitsTable"></div>
+    </div>
+  </div>
+
+  <!-- ============ 4. QUIZ ============ -->
+  <div id="tab-quiz" class="tab">
+    <div class="card">
+      <h2>❓ Quiz z zasad ruchu drogowego</h2>
+      <div class="box" id="quizInfo"></div>
+      <div class="chips-filter" id="quizFilters"></div>
+      <div id="quizList"></div>
+      <div class="box ok" id="quizScore" style="display:none"></div>
+    </div>
+  </div>
+
+  <!-- ============ 5. BŁĘDY ============ -->
+  <div id="tab-bledy" class="tab">
+    <div class="card">
+      <h2>⚠️ Błędy i sytuacje — analiza</h2>
+      <div id="errSummary"></div>
+    </div>
+    <div class="card">
+      <h2>📌 Co dokładnie zrobić inaczej</h2>
+      <p class="note">Rozwiń błąd, który zdarza Ci się najczęściej.</p>
+      <div id="errInfo"></div>
+    </div>
+  </div>
+
+  <!-- ============ 6. ŚCIĄGA ============ -->
+  <div id="tab-sciaga" class="tab">
+    <div class="card rules">
+      <h2>📖 Ściąga — wiedza w pigułce</h2>
+      <p class="note">Szybka powtórka przed jazdą i przed snem. Rozwiń to, czego nie jesteś pewna.</p>
+
+      <h3>Ronda — z którego pasa jaki manewr</h3>
+      <div class="box">
+        <b>Wjazd:</b> na rondzie ze znakiem C-12 (ruch okrężny) wjeżdżasz <b>bez kierunkowskazu</b>. Lewy kierunkowskaz przed wjazdem sugerowałby jazdę „pod prąd”.<br>
+        <b>1. zjazd (w prawo):</b> prawy pas + prawy kierunkowskaz już przed wjazdem.<br>
+        <b>2. zjazd (na wprost):</b> prawy pas, prawy kierunkowskaz po minięciu 1. zjazdu.<br>
+        <b>3. zjazd (w lewo / zawracanie):</b> lewy pas, prawy kierunkowskaz <b>po minięciu zjazdu poprzedzającego Twój</b>.<br>
+        <b>Zmiana pasa na rondzie:</b> to zwykła zmiana pasa — <b>ustępujesz</b> temu, kto jedzie pasem, na który wjeżdżasz. Nie „masz pierwszeństwa, bo to Twój zjazd”.
+      </div>
+      <div class="box warn"><b>Kierunkowskaz przy zjeździe — timing:</b> za wcześnie = kierowcy na wcześniejszym zjeździe wjadą Ci przed maskę. Za późno = egzaminator uzna brak sygnalizacji z wyprzedzeniem. Sygnalizuj <b>po minięciu poprzedniego zjazdu</b>.</div>
+
+      <h3>Skrzyżowania</h3>
+      <div class="box">
+        <b>Równorzędne (bez znaków):</b> zasada prawej ręki — ustępujesz pojazdom z prawej. Wyjątki: pojazdy uprzywilejowane, tramwaje, a skręcający w lewo ustępuje jadącemu z naprzeciwka na wprost.<br>
+        <b>Z pierwszeństwem (A-7 / D-1):</b> Ty jedziesz, ale tylko jeśli droga z pierwszeństwem faktycznie skręca w Twoim kierunku — patrz na <b>tabliczkę T-6</b> pod znakiem.<br>
+        <b>Lewoskręt:</b> wjeżdżasz na skrzyżowanie i czekasz <b>przed środkiem</b>, koła prosto, dopiero potem skręcasz.
+      </div>
+      <div class="box warn"><b>Znak nakazu „prosto i w prawo”:</b> pozwala jechać prosto albo w prawo — nie musisz skręcać. Kierunek wybierasz wcześniej i sygnalizujesz zawczasu.</div>
+
+      <h3>Limity prędkości w Polsce</h3>
+      <div class="box">
+        <b>Obszar zabudowany (D-42):</b> 50 km/h całodobowo.<br>
+        <b>Strefa zamieszkania (D-40):</b> 20 km/h, pieszy ma pierwszeństwo i może iść całą szerokością jezdni.<br>
+        <b>Strefa ograniczonej prędkości (B-43):</b> tyle, ile na znaku — <b>i nie odwołuje jej skrzyżowanie</b>, obowiązuje do znaku B-44.<br>
+        <b>Poza obszarem zabudowanym:</b> 90 (jednojezdniowa), 100 (dwujezdniowa), 120 (autostrada), 140 (droga ekspresowa dwujezdniowa).
+      </div>
+      <div class="box warn"><b>Co odwołuje zwykłe ograniczenie (B-33)?</b> Najbliższe <b>skrzyżowanie z drogą publiczną</b> (nie: z drogą wewnętrzną, osiedlową, dojazdową) albo znak B-34. Stref B-43 i B-40 skrzyżowanie nie odwołuje.</div>
+
+      <h3>Zatrzymanie i pierwszeństwo</h3>
+      <div class="box stop"><b>Znak B-20 STOP:</b> koła muszą się faktycznie zatrzymać (0 km/h). Zderzak przed linią P-12; bez linii — tam, gdzie widzisz drogę poprzeczną.</div>
+      <div class="box"><b>Sygnał żółty:</b> zakaz wjazdu za sygnalizator — możesz wjechać tylko wtedy, gdy nie zdążysz bezpiecznie zahamować przed linią.<br><b>Zielona strzałka (S-1):</b> warunkowy skręt w prawo — warunek „ustąp” obowiązuje cały czas.</div>
+
+      <h3>Technika jazdy, która Cię męczy</h3>
+      <div class="box">
+        <b>Biegi:</b> zmieniaj przy ok. <b>2000 obr./min</b>. Bieg dobieraj <b>przed</b> manewrem, nie w jego trakcie.<br>
+        <b>Przed skrętem:</b> hamuj, zredukuj do 2, puść sprzęgło, dopiero kręć.<br>
+        <b>Prędkościomierz:</b> patrz na <b>górny</b> wskaźnik, nie na licznik kilometrów u dołu.<br>
+        <b>Sprzęgło:</b> przytrzymaj 2 sekundy w punkcie chwytu, gaz delikatnie; przy parkowaniu jedziesz na półsprzęgle.<br>
+        <b>Pedał gazu i hamulca:</b> wciskaj „ze czucia”, nie do oporu — auto ma nie szarpać.
+      </div>
+
+      <h3>Twoje zasady od 1. jazdy w Łomży</h3>
+      <div class="box ok">
+        1. <b>LEWO → PRAWO → LEWO</b> tuż przed ruszeniem z drogi podporządkowanej.<br>
+        2. <b>Mniej gadania w aucie</b> — cisza to nie „coś jest nie tak”, to Twoja głowa pracuje.<br>
+        3. <b>Nie zgaduj z pasów</b> — znak nakazu czytaj zawczasu.<br>
+        4. Presja pieniędzy i terminu sama nie zawiezie. Wieź spokój, nie panikę.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 7. PLAN ============ -->
+  <div id="tab-plan" class="tab">
+    <div class="card">
+      <h2>📅 Tydzień egzaminacyjny — 16–22 X 2026</h2>
+      <div class="box" id="examCountdown"></div>
+      <div id="planList"></div>
+    </div>
+    <div class="card">
+      <h2>✅ Ocena gotowości</h2>
+      <div id="readyCheck"></div>
+      <div class="gauge"><div id="gauge"></div></div>
+      <p class="note" id="gaugeNote" style="margin-top:8px"></p>
+    </div>
+    <div class="card">
+      <h2>🕒 Godziny</h2>
+      <div class="box" id="hoursBox"></div>
+    </div>
+  </div>
+
+</div>
+
+<nav>
+  <button class="nb active" data-t="dziennik"><span class="ic">📝</span>Dziennik</button>
+  <button class="nb" data-t="cwiczenia"><span class="ic">🎯</span>Ćwiczenia</button>
+  <button class="nb" data-t="znaki"><span class="ic">🚸</span>Znaki</button>
+  <button class="nb" data-t="quiz"><span class="ic">❓</span>Quiz</button>
+  <button class="nb" data-t="bledy"><span class="ic">⚠️</span>Błędy</button>
+  <button class="nb" data-t="sciaga"><span class="ic">📖</span>Ściąga</button>
+  <button class="nb" data-t="plan"><span class="ic">📅</span>Plan</button>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================== DANE: OBSZARY, ZADANIA, QUIZ, ZNAKI ================== */
+const AREAS=[
+ {id:'clutch',   name:'Sprzęgło i ruszanie'},
+ {id:'gears',    name:'Zmiana biegów'},
+ {id:'obs',      name:'Obserwacja i lusterka'},
+ {id:'rule',     name:'Zasady i znaki'},
+ {id:'dir',      name:'Kierunek jazdy i trasa'},
+ {id:'speed',    name:'Prędkość'},
+ {id:'smooth',   name:'Płynność jazdy'},
+ {id:'talk',     name:'Rozmowa za kierownicą'},
+ {id:'sit',      name:'Sytuacje nieprzewidziane'},
+ {id:'indep',    name:'Samodzielność (bez podpowiedzi)'}
+];
+const areaName=id=>(AREAS.find(a=>a.id===id)||{}).name||id;
+const RLAB={good:'Dobrze',medium:'W miarę',bad:'Do poprawy'};
+
+/* ================== KATALOG BŁĘDÓW ================== */
+const ERRORS=[
+ {id:'e_noruch', name:'Brak kierunkowskazu', area:'rule',
+  why:'Kierunkowskaz to informacja dla innych. Bez niego nikt nie wie, co zamierzasz — to błąd, który egzaminator widzi od razu.',
+  fix:'Zasada „lusterko → kierunkowskaz → manewr”. Sygnalizuj zanim zaczniesz kręcić kierownicą, nie w trakcie.'},
+ {id:'e_nolook', name:'Nie rozejrzałam się porządnie', area:'obs',
+  why:'Patrzenie to nie to samo co patrzenie w lusterko. Na egzaminie liczy się widoczny ruch głowy i kolejność obserwacji.',
+  fix:'Sekwencja LEWO → PRAWO → LEWO przy każdym wyjeździe z podporządkowanej. Ruch głowy ma być wyraźny, nie tylko oczu.'},
+ {id:'e_wrongdir', name:'Nie pojechałam tam, gdzie powinnam', area:'dir',
+  why:'Zły kierunek bierze się z decyzji podejmowanej za późno — gdy pas i znak nakazu trzeba już tylko odczytać, jesteś za blisko.',
+  fix:'Czytaj znaki i tabliczki z wyprzedzeniem i mów na głos: „pas prosto i w prawo, jadę prosto”. Jeśli przeoczyłaś — jedź bezpiecznie dalej niż na siłę skręcać.'},
+ {id:'e_wronggear', name:'Zmiana na niewłaściwy bieg', area:'gears',
+  why:'Zwykle z pośpiechu i ze stresu — drążek idzie tam, gdzie ręka pamięta, a nie tam, gdzie trzeba.',
+  fix:'Bieg dobieraj PRZED manewrem i sprawdzaj obrotomierz po zmianie. Gdy wrzucisz za wysoki bieg, zredukuj od razu, spokojnie, bez paniki.'},
+ {id:'e_noclutch', name:'Zmiana biegu bez sprzęgła', area:'gears',
+  why:'Niszczy skrzynię i powoduje szarpnięcie. Zdarza się, gdy lewa noga odruchowo wraca na podłogę po ruszeniu.',
+  fix:'Lewa noga po puszczeniu sprzęgła odpoczywa na podłodze, ale nie zmieniasz biegu, dopóki nie wciśniesz sprzęgła do końca.'},
+ {id:'e_brakelate', name:'Instruktor musiał hamować za mnie', area:'sit',
+  why:'To najpoważniejsza kategoria — oznacza, że nie zauważyłaś zagrożenia przed instruktorem.',
+  fix:'Zwalniaj przy każdym miejscu, gdzie widoczność się kończy: zasłonięte wloty, osiedla, auta na poboczu. Prędkość to Twoje pole manewru — jeśli jej nie masz, decyzja podejmuje się za późno.'},
+ {id:'e_hardshake', name:'Auto szarpało / gasło', area:'clutch',
+  why:'Sprzęgło odciąga uwagę od drogi, dopóki ruszanie nie jest automatyczne.',
+  fix:'Punkt chwytu: przytrzymaj stopę 2 sekundy, dopiero potem gaz. Bez gazu na wzniesieniu się nie ruszy — gaz dodawaj razem z puszczaniem sprzęgła.'},
+ {id:'e_lateact', name:'Za wolno zareagowałam', area:'smooth',
+  why:'Wahanie przed skrzyżowaniem tworzy niepewność i dla Ciebie, i dla innych kierowców.',
+  fix:'Decyzja przed dojazdem, nie na skrzyżowaniu. Jeśli nie jesteś pewna — zatrzymaj się. Zatrzymanie jest bezpieczne, wahanie nie.'},
+ {id:'e_nomirror', name:'Brak obserwacji w lusterku', area:'obs',
+  why:'Bez lusterka nie wiesz, kto jedzie obok. Wtedy pas i prędkość są zgadywaniem.',
+  fix:'Lusterko przed każdą zmianą pasa, każdym skrętem i każdym hamowaniem, które zaskoczy tego z tyłu.'},
+ {id:'e_speed', name:'Przekroczenie prędkości / zły limit', area:'speed',
+  why:'Strefy 30 na osiedlach w Łomży nie odwołuje skrzyżowanie — najbardziej kosztowna pomyłka.',
+  fix:'B-43/B-40 obowiązują do znaku końca strefy. Sprawdzaj prędkościomierz na GÓRNYM wskaźniku co ok. 10 sekund.'},
+ {id:'e_stop', name:'Nie zatrzymałam się przy STOP', area:'rule',
+  why:'Toczenie się przy STOP to wynik negatywny — koła muszą stanąć w miejscu.',
+  fix:'Koła 0 km/h, zderzak przed linią P-12. Policz w myślach „raz”, dopiero ruszaj.'},
+ {id:'e_pedal', name:'Za mocno hamulec / gaz', area:'smooth',
+  why:'Pedał jak włącznik/nicoś — jazda szarpie i utrudnia obserwację.',
+  fix:'Wciskaj stopą „ze czucia”, nie z góry na dół. Cel: auto nie zmienia prędkości z mrugnięciem oka.'},
+ {id:'e_stall', name:'Zgasł mi silnik', area:'clutch',
+  why:'Najczęściej zbyt szybkie puszczenie sprzęgła lub wrzucony za wysoki bieg przy starcie.',
+  fix:'Ruszenie zawsze z jedynki, sprzęgło w punkcie chwytu 2 sekundy. Stres po zgaśnięciu obsługuj oddechem: 1-2-3 i jedziesz dalej.'}
+];
+const errName=id=>(ERRORS.find(e=>e.id===id)||{}).name||id;
+const ERROR_AREAS=ERRORS.map(e=>[e.id,e.area]);
+
+/* ================== DANE: SKRÓTY NAZW ================== */
+function talkName(v){return {none:'Cisza',low:'Mało',med:'Średnio',high:'Dużo gadania'}[v]||'—';}
+function sitName(v){return {pieszy:'Pieszy',dziecko:'Dziecko',rowerzysta:'Rowerzysta',hulajnoga:'Hulajnoga',zwierzak:'Zwierzak',inne:'Inne auto',nic:'Nic się nie stało'}[v]||v;}
+function qualName(v){return {plynna:'Płynna',zabka:'Żabka / szarpanie',hamulce:'Po hamulcach',gaz:'Za dużo gazu','gaz-min':'Gaz i hamulec delikatnie','biegi-gracja':'Biegi z gracją','biegi-opozn':'Biegi za późno','sprzeglo-g':'Sprzęgło wyczute'}[v]||v;}
+
+/* ================== PODPOWIEDZI DO BŁĘDÓW ================== */
+const ERR_RECO=[
+ {err:'e_noruch', tip:'Kierunkowskaz to decyzja, nie manewr. Ustaw sobie zasadę: ręka na dźwigni, zanim pomyślisz o kierownicy. Na następnej jazdzie policz, ile razy włączyłaś kierunkowskaz za późno.'},
+ {err:'e_nolook', tip:'Zrób sobie ćwiczenie na głos: przy każdym wyjeździe z drogi podporządkowanej mów „LEWO — PRAWO — LEWO”, i dopiero wtedy ruszaj. To dokładnie ta sytuacja, w której instruktor musiał hamować.'},
+ {err:'e_wrongdir', tip:'Zły kierunek bierze się z decyzji podejmowanej za późno. Przed każdym skrzyżowaniem powiedz na głos, gdzie jedziesz i jakim pasem — 30 metrów wcześniej.'},
+ {err:'e_wronggear', tip:'Bieg za wysoki w zakręcie = auto gaśnie albo szarpie. Zmieniaj bieg PRZED skrętem: hamuj, redukuj, puść sprzęgło, potem kręć kierownicą.'},
+ {err:'e_noclutch', tip:'Zmiana biegu bez sprzęgła zdarza się po ruszeniu, gdy lewa noga wraca na podłogę. Wymuś nawyk: najpierw sprzęgło do końca, potem drążek.'},
+ {err:'e_brakelate', tip:'Jeśli instruktor musiał hamować za Ciebie, to najpoważniejszy typ błędu. Zwalniaj zawsze, gdy widoczność się kończy: zasłonięty wlot, żywopłot, auto na poboczu, osiedle.'},
+ {err:'e_speed', tip:'Strefy 30 na osiedlach: przejrzyj tabelę limitów w zakładce Znaki. Następna jazda — po każdym B-43 powiedz na głos „tu nadal 30”.'},
+  {err:'e_stop', tip:'Przy STOP-ie koła mają stanąć (0 km/h). Policz w myślach „raz” po zatrzymaniu, dopiero ruszaj.'},
+ {err:'e_hardshake', tip:'Jeśli auto szarpie: przytrzymaj sprzęgło w punkcie chwytu 2 sekundy, dopiero potem delikatnie gaz.'}
+];
+
+/* ================== ZADANIA TRENINGOWE ================== */
+const TASKS=[
+ {id:'t1',area:'clutch',title:'Punkt chwytu — 20 powtórzeń',desc:'Na spokojnym odcinku ruszaj 20 razy z rzędu. Za każdym razem: sprzęgło w punkcie chwytu, stopa nieruchoma 2 sekundy, dopiero delikatny gaz.',why:'Dopóki ruszanie nie jest automatyczne, sprzęgło zjada Ci uwagę potrzebną na drogę.',doNow:'Poproś instruktora o 10 minut samego ruszania na początku jazdy.'},
+ {id:'t2',area:'gears',title:'Zmiana biegu przy 2000 obr./min',desc:'Przez jedną jazdę zmieniaj biegi wyłącznie po obrotomierzu: w górę przy ~2000, w dół przy ~1200. Oko na obrotomierz — rzut, nie wpatrywanie.',why:'„Na słuch” nie zadziała, dopóki nie masz odniesienia. 2000 obr./min to Twoje odniesienie.',doNow:'15 minut świadomej nauki obrotów na spokojnej ulicy.'},
+ {id:'t3',area:'gears',title:'Bieg dobrany PRZED manewrem',desc:'Przed każdym skrętem: hamuj — redukuj do 2 — puść sprzęgło — dopiero kręć. Zakaz porządkowania biegów w trakcie manewru.',why:'Pomyłka 1 → 4 ze stresu to skutek decyzji podejmowanej za późno, nie braku umiejętności.',doNow:'Na 3 skrzyżowaniach powiedz na głos, jaki bieg masz przed manewrem.'},
+ {id:'t4',area:'obs',title:'SEKWENCJA: LEWO → PRAWO → LEWO',desc:'Przy każdym wyjeździe z podporządkowanej: lusterko, kierunkowskaz, LEWO, PRAWO, i znowu LEWO tuż przed ruszeniem.',why:'To dokładnie ta sytuacja, w której instruktor musiał hamować. Auta z pierwszeństwem nadjeżdżają szybciej, niż wyglądają.',doNow:'Następna jazda: mów „lewo, prawo, lewo” na głos przy każdym wyjeździe.'},
+ {id:'t5',area:'obs',title:'Wzrok 50 metrów przed maskę',desc:'Na spokojnym odcinku przenieś wzrok daleko i skanuj co 3–4 sekundy: daleka droga → znaki → pobocze i przejścia → lusterko.',why:'Nie da się czytać znaków i prędkości, patrząc pod maskę.',doNow:'Poproś instruktora: „niech mnie Pani/Pan sprawdza, jaki znak minęłam 10 sekund temu”.'},
+ {id:'t6',area:'indep',title:'Jazda próbna bez podpowiedzi',desc:'Umów jazdę, w której instruktor NIE podpowiada, dopóki nie zagraża bezpieczeństwo. Zapisuj, ile razy musiał interweniować.',why:'To jedyna uczciwa miara gotowości — nie liczba godzin, tylko liczba interwencji.',doNow:'Zaplanuj na 20–21 X i porównaj z 16 X.'},
+ {id:'t7',area:'indep',title:'Cel: jedna jazda bez rozmowy',desc:'Cały blok jedziesz w ciszy — bez rozmowy, bez radia. Cisza to nie sygnał, że coś jest nie tak: to Twoja głowa pracuje.',why:'Im bardziej się wdawałaś w rozmowę, tym więcej było błędów. Sprawdź, czy cisza je zmniejsza.',doNow:'Powiedz instruktorowi przed jazdą: „dziś jedziemy w ciszy”.'},
+ {id:'t8',area:'speed',title:'Strefa 30 vs skrzyżowanie',desc:'Zapamiętaj: zwykłe ograniczenie odwołuje najbliższe skrzyżowanie z drogą publiczną. Strefy B-43 i B-40 skrzyżowanie NIE odwołuje.',why:'Na osiedlach Łomży po skrzyżowaniu zwalnia się do 50, a limit nadal wynosi 30 — to natychmiastowe przerwanie egzaminu.',doNow:'Po każdym B-43 powiedz na głos „tu nadal 30”.'},
+ {id:'t9',area:'rule',title:'Kierunkowskaz przed manewrem',desc:'Ręka na dźwigni jest pierwsza. Na jednej jazdzie licz samą siebie: ile razy włączyłaś kierunkowskaz dopiero w trakcie skrętu.',why:'Brak kierunkowskazu to błąd najłatwiejszy do wyeliminowania i widoczny dla egzaminatora.',doNow:'Przed jazdą: „dzisiaj liczę kierunkowskazy”.'},
+ {id:'t10',area:'dir',title:'Decyzja 30 metrów wcześniej',desc:'Przed każdym skrzyżowaniem powiedz na głos: „jadę prosto, pas środkowy” albo „w prawo, pas z nakazem”. Decyzja padła, zanim dojechałaś.',why:'Kierunek wybrany za późno oznacza zjazd nie tam, gdzie trzeba — i nerwy na środku skrzyżowania.',doNow:'Na 5 skrzyżowaniach — komentarz na głos.'},
+ {id:'t11',area:'smooth',title:'Pedał jak przycisk, nie jak nicoś',desc:'Jedziesz na bardzo delikatnym gazie i hamujesz „ze czucia”. Cel: auto nie zmienia prędkości z mrugnięciem oka.',why:'Szarpnięcie bierze się z nogi przyzwyczajonej do wciskania do oporu.',doNow:'10 minut na spokojnej drodze — tylko praca prawej nogi.'},
+ {id:'t12',area:'sit',title:'Zwalniaj tam, gdzie kończy się widoczność',desc:'Zasłonięty wlot, żywopłot, auto na poboczu, osiedle: noga na hamulcu i prędkość 5–10 km/h, dopiero potem decyzja.',why:'„Musiałam dać po hamulcach” zawsze znaczy to samo: jechałaś za szybko, żeby widzieć.',doNow:'Poproś instruktora, żeby pokazał Ci odcinki w Łomży z zasłoniętymi wlotami.'},
+ {id:'t13',area:'sit',title:'Pieszy, rowerzysta, hulajnoga — scenariusze',desc:'Przed jazdą przejdź 3 scenariusze: pieszy wychodzi zza autobusu, rowerzysta wyprzedza Cię przy skręcie w prawo, hulajnogista na przejściu.',why:'Sytuacja nieprzewidziana nie zabiera umiejętności — zabiera czas. Masz go więcej, gdy reakcja jest wyćwiczona.',doNow:'Przed jazdą 3 minuty w aplikacji: czytaj zasady i mów, co zrobisz.'},
+ {id:'t14',area:'talk',title:'Krótkie zdania, potem cisza',desc:'Odpowiedz instruktorowi zdaniem i wróć do ciszy. Nie rozwijaj wątku, dopóki prowadzisz.',why:'Rozmowa to najszybciej działający rozpraszacz i sama wiesz, ile Cię kosztowała.',doNow:'Ustaw to jako cel jednej jazdy w dzienniku.'}
+];
+
+/* ================== QUIZ ================== */
+const QUIZ=[
+ {id:'q1',area:'rule',q:'Zjeżdżasz z wewnętrznego pasa ronda wielopasowego. Na prawym pasie jedzie auto. Kto ma pierwszeństwo?',
+  o:['Ja — to przecież mój zjazd.','Auto na prawym pasie — zmiana pasa to zwykła zmiana pasa.','Ten, kto jedzie szybciej.'],a:1,
+  e:'Zmiana pasa na rondzie podlega zwykłym regułom zmiany pasa. Pas z prawej jest chroniony — ustępujesz.'},
+ {id:'q2',area:'rule',q:'Wjeżdżasz na rondo ze znakiem C-12 i zamierzasz jechać dookoła, żeby zjechać 3. zjazdem. Kiedy włączasz kierunkowskaz?',
+  o:['Lewy kierunkowskaz przed wjazdem.','Bez kierunkowskazu przy wjeździe; prawy dopiero sygnalizując zjazd.','Prawy kierunkowskaz już przed wjazdem.'],a:1,
+  e:'Przy znaku C-12 nie skręcasz — jedziesz zgodnie z kierunkiem ruchu okrężnego. Lewy kierunkowskaz sugerowałby wjazd „pod prąd”.'},
+ {id:'q3',area:'rule',q:'Zjeżdżasz 2. zjazdem. Po minięciu jakiego miejsca włączasz prawy kierunkowskaz?',
+  o:['Tuż przed wjazdem na rondo.','Po minięciu zjazdu poprzedzającego mój zjazd.','W momencie kręcenia kierownicą.'],a:1,
+  e:'Za wcześnie — ktoś na wcześniejszym zjeździe wjedzie Ci przed maskę. Za późno — brak sygnalizacji z wyprzedzeniem.'},
+ {id:'q4',area:'rule',q:'Dojeżdżasz do skrzyżowania bez żadnych znaków. Z prawej nadjeżdża auto. Co robisz?',
+  o:['Jadę — nie ma STOP-u, więc jestem na głównej.','Ustępuję pojazdowi z prawej strony.','Trąbię, żeby mnie przepuścił.'],a:1,
+  e:'Skrzyżowanie równorzędne = zasada prawej ręki.'},
+ {id:'q5',area:'rule',q:'Masz zielone światło ogólne i skręcasz w lewo. Z naprzeciwka jedzie auto na wprost. Kto ma pierwszeństwo?',
+  o:['Ja — mam zielone.','Pojazd z naprzeciwka jadący na wprost.','Ten, kto pierwszy wjedzie.'],a:1,
+  e:'Zielone ogólne zezwala na wjazd, ale skręcający w lewo ustępuje jadącemu z naprzeciwka na wprost lub w prawo.'},
+ {id:'q6',area:'dir',q:'Na pasie jest znak nakazu „prosto i w prawo”. Co to znaczy?',
+  o:['Muszę skręcić w prawo.','Mogę jechać prosto albo w prawo — decyduję wcześniej i sygnalizuję.','Nie mogę jechać tym pasem, jeśli chcę prosto.'],a:1,
+  e:'Znak nakazu dopuszcza oba kierunki. Kierunek wybierasz przed dojazdem i sygnalizujesz zawczasu.'},
+ {id:'q7',area:'speed',q:'Mijasz B-43 „Strefa 30”, a za chwilę skrzyżowanie. Jaki limit obowiązuje za skrzyżowaniem?',
+  o:['50 km/h, bo skrzyżowanie odwołało ograniczenie.','Nadal 30 km/h — strefy nie odwołuje skrzyżowanie.','60 km/h.'],a:1,
+  e:'Strefę ograniczonej prędkości odwołuje tylko znak B-44, nie skrzyżowanie.'},
+ {id:'q8',area:'speed',q:'Co odwołuje zwykłe ograniczenie prędkości?',
+  o:['Najbliższe skrzyżowanie z drogą publiczną lub znak B-34.','Każde przejście dla pieszych.','Dopiero koniec miejscowości.'],a:0,
+  e:'Skrzyżowanie z drogą publiczną — chyba że to połączenie z drogą wewnętrzną, osiedlową lub dojazdową.'},
+ {id:'q9',area:'speed',q:'Maksymalna prędkość w strefie zamieszkania (D-40)?',
+  o:['20 km/h','30 km/h','50 km/h'],a:0,
+  e:'20 km/h, a pieszy ma tam pierwszeństwo i może korzystać z całej szerokości jezdni.'},
+ {id:'q10',area:'speed',q:'Limit poza obszarem zabudowanym na drodze jednojezdniowej dla samochodu osobowego?',
+  o:['80 km/h','90 km/h','100 km/h'],a:1,
+  e:'90 km/h na jednojezdniowej; 100 km/h na dwujezdniowej, 140 km/h na drodze ekspresowej dwujezdniowej.'},
+ {id:'q11',area:'gears',q:'Zbliżasz się do skrzyżowania i chcesz skręcić. Jak używać biegów?',
+  o:['Wciskam sprzęgło 100 m wcześniej.','Hamuję, redukuję bieg przed skrętem, puszczam sprzęgło, potem skręcam.','Skręcam na luzie i wbijam bieg po zakręcie.'],a:1,
+  e:'Bieg przygotowujesz PRZED manewrem. Jazda na sprzęgle lub luzie to błąd.'},
+ {id:'q12',area:'gears',q:'Przy jakich obrotach najbezpieczniej zmieniać bieg w górę?',
+  o:['Około 1000 obr./min','Około 2000 obr./min','Zawsze 3500 obr./min'],a:1,
+  e:'Ok. 2000 obr./min to czytelny próg, słychać też rosnący hałas silnika.'},
+ {id:'q13',area:'clutch',q:'Auto gaśnie i szarpie przy ruszaniu. Najczęstsza przyczyna?',
+  o:['Zbyt szybkie puszczenie sprzęgła przed punktem chwytu / za mało gazu.','Zły kierunkowskaz.','Włączona klimatyzacja.'],a:0,
+  e:'Płynne ruszanie: przytrzymaj sprzęgło w punkcie chwytu 2 sekundy, delikatnie dodając gaz.'},
+ {id:'q14',area:'clutch',q:'Jak prawidłowo ruszyć na wzniesieniu?',
+  o:['Szybko puścić sprzęgło i liczyć na moc silnika.','Hamulec ręczny → punkt chwytu → gaz → zwolnić hamulec ręczny.','Ruszyć na wstecznym.'],a:1,
+  e:'Sekwencja: hamulec, sprzęgło, punkt chwytu, gaz, zwolnienie hamulca ręcznego — do automatyzmu.'},
+ {id:'q15',area:'obs',q:'Wyjeżdżasz z drogi podporządkowanej w prawo. Jaką sekwencję obserwacji wykonujesz?',
+  o:['Tylko w prawo — tam jadę.','LEWO → PRAWO → LEWO, i dopiero ruszam.','Wystarczy lusterko wsteczne.'],a:1,
+  e:'Drugie spojrzenie w lewo tuż przed ruszeniem jest obowiązkowe — auta na drodze z pierwszeństwem nadjeżdżają szybciej, niż się wydaje.'},
+ {id:'q16',area:'sit',q:'Wlot z prawej jest zasłonięty żywopłotem. Z jaką prędkością dojeżdżasz do skrzyżowania równorzędnego?',
+  o:['40–50 km/h, bo i tak mam pierwszeństwo z lewej.','5–10 km/h lub zatrzymanie, żeby wychylić się zza przeszkody.','Nie zwalniam, żeby nie blokować innych.'],a:1,
+  e:'Zasłonięty wlot = brak widoczności, a bez widoczności nie ma bezpiecznego przejazdu.'},
+ {id:'q17',area:'sit',q:'Pieszy wychodzi zza stojącego autobusu na przejściu. Co robisz?',
+  o:['Ustępuję — pieszy na przejściu ma pierwszeństwo, a autobus zasłania widok.','Trąbię, żeby się cofnął.','Jadę, bo nie widziałam go wcześniej.'],a:0,
+  e:'Autobus na przystanku to klasyczne miejsce wyjścia pieszego zza przeszkody. Zwalniaj przy każdym przystanku.'},
+ {id:'q18',area:'rule',q:'Wjeżdżasz na skrzyżowanie, żeby skręcić w lewo. Gdzie czekasz na przejazd?',
+  o:['Za środkiem skrzyżowania.','Przed środkiem, koła prosto.','Na pasie do jazdy na wprost.'],a:1,
+  e:'Czekasz przed środkiem, żeby nie blokować skrzyżowania; koła prosto, żeby nie zostać wepchniętym w lewo.'}
+];
+
+/* ================== ZNAKI (SVG) ================== */
+function g(cx,cy,r,fill,stroke){return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="6"/>';}
+function poly(pts,fill,stroke,w){return '<polygon points="'+pts+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+(w||7)+'"/>';}
+function txt(x,y,t,size,fill){return '<text x="'+x+'" y="'+y+'" font-size="'+(size||30)+'" font-weight="800" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" fill="'+(fill||'#1e293b')+'">'+t+'</text>';}
+const SVGHEAD='<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">';
+const SVGE='</svg>';
+const SIGNS=[
+ {id:'b36',name:'B-36 „zakaz zatrzymywania się”',cat:'zakaz',svg:SVGHEAD+g(100,100,82,'#fff','#dc2626')+'<line x1="42" y1="42" x2="158" y2="158" stroke="#dc2626" stroke-width="11"/><line x1="158" y1="42" x2="42" y2="158" stroke="#dc2626" stroke-width="11"/>'+txt(100,150,'B-36',20,'#dc2626')+SVGE,
+  desc:'Biała tarcza z czerwoną obwódką i czerwonym krzyżem.',act:'Zakaz ZATRZYMYWANIA się — nawet na chwilę. Zatrzymanie = błąd, nie wolno wysadzać pasażera.'},
+ {id:'b1',name:'B-1 „zakaz ruchu”',cat:'zakaz',svg:SVGHEAD+g(100,100,82,'#dc2626','#7f1d1d')+'<rect x="46" y="88" width="108" height="24" rx="6" fill="#fff"/>'+SVGE,
+  desc:'Czerwone koło z białym poziomym prostokątem.',act:'Zakaz ruchu w obu kierunkach — nie wjeżdżasz, wybierasz inną drogę.'},
+ {id:'b33',name:'B-33 „ograniczenie prędkości 40”',cat:'predkosc',svg:SVGHEAD+g(100,100,82,'#fff','#dc2626')+txt(100,122,'40',64)+SVGE,
+  desc:'Biała tarcza z czerwoną obwódką i liczbą.',act:'Nie przekraczaj 40 km/h. Obowiązuje do najbliższego skrzyżowania z drogą publiczną albo do znaku B-34.'},
+ {id:'b43',name:'B-43 „strefa 30”',cat:'predkosc',svg:SVGHEAD+'<rect x="20" y="40" width="160" height="120" rx="16" fill="#fff" stroke="#dc2626" stroke-width="7"/>'+txt(100,124,'30',56)+SVGE,
+  desc:'Biała prostokątna tablica z czerwoną obwódką i liczbą, na wjeździe do strefy.',act:'Limit obowiązuje na WSZYSTKICH ulicach strefy i NIE odwołuje go skrzyżowanie. Kończy go dopiero B-44.'},
+ {id:'b44',name:'B-44 „koniec strefy”',cat:'predkosc',svg:SVGHEAD+'<rect x="20" y="40" width="160" height="120" rx="16" fill="#fff" stroke="#dc2626" stroke-width="7"/>'+txt(100,118,'30',46)+'<line x1="42" y1="150" x2="158" y2="52" stroke="#475569" stroke-width="7"/>'+SVGE,
+  desc:'Tablica strefy z liczbą i przekreśleniem.',act:'Koniec strefy ograniczonej prędkości — wraca limit ogólny.'},
+ {id:'d40',name:'D-40 „strefa zamieszkania”',cat:'strefa',svg:SVGHEAD+'<rect x="20" y="46" width="160" height="108" rx="14" fill="#1d4ed8"/><path d="M62 108 L62 84 L90 84 L98 70 L122 70 L130 84 L138 84 L138 108 Z" fill="#fff"/>'+g(76,110,9,'#1e293b','#fff')+g(124,110,9,'#1e293b','#fff')+SVGE,
+  desc:'Niebieska tablica z białym samochodem, dzieckiem i domkami.',act:'Limit 20 km/h. Pieszy ma pierwszeństwo i może iść całą szerokością jezdni. Wyjazd ze strefy = włączasz się do ruchu i ustępujesz wszystkim.'},
+ {id:'d42',name:'D-42 „obszar zabudowany”',cat:'strefa',svg:SVGHEAD+'<rect x="22" y="52" width="156" height="96" rx="10" fill="#fff" stroke="#1e293b" stroke-width="6"/><path d="M50 128 L50 96 L70 96 L70 78 L86 78 L86 96 L100 96 L100 72 L118 72 L118 96 L136 96 L136 128 Z" fill="#1e293b"/>'+SVGE,
+  desc:'Biała tablica z czarnymi sylwetkami budynków.',act:'Wjeżdżasz do obszaru zabudowanego: limit 50 km/h całodobowo.'},
+ {id:'a7',name:'A-7 „ustąp pierwszeństwa”',cat:'pierwszenstwo',svg:SVGHEAD+poly('100,26 176,170 24,170','#fff','#dc2626')+SVGE,
+  desc:'Odwrócony trójkąt — biały z czerwoną obwódką.',act:'Ustąp pierwszeństwa pojazdom na drodze, do której się włączasz. Nie musisz się zatrzymywać, jeśli jest wolna — ale musisz być gotowa.'},
+ {id:'b20',name:'B-20 „STOP”',cat:'pierwszenstwo',svg:SVGHEAD+poly('100,22 164,56 164,120 100,178 36,120 36,56','#dc2626','#7f1d1d')+txt(100,116,'STOP',32,'#fff')+SVGE,
+  desc:'Czerwony ośmiokąt z białym napisem STOP.',act:'BEZWZGLĘDNE zatrzymanie — koła 0 km/h. Zderzak przed linią P-12, a bez linii tam, gdzie widzisz drogę poprzeczną. Potem ustępujesz wszystkim.'},
+ {id:'d1',name:'D-1 „droga z pierwszeństwem”',cat:'pierwszenstwo',svg:SVGHEAD+poly('100,22 172,60 172,140 100,178 28,140 28,60','#1d4ed8','#0f172a')+poly('100,58 142,82 142,128 100,152 58,128 58,82','#facc15','#0f172a',4)+SVGE,
+  desc:'Niebieski pięciokąt z żółtym rombem.',act:'Jedziesz drogą z pierwszeństwem — ale sprawdź tabliczkę T-6: jeśli droga skręca, musisz sygnalizować i ustąpić.'},
+ {id:'a17',name:'A-17 „dzieci”',cat:'ostrzegawczy',svg:SVGHEAD+poly('100,26 176,170 24,170','#facc15','#0f172a')+txt(100,152,'👧',48)+SVGE,
+  desc:'Żółty trójkąt z sylwetkami dzieci.',act:'Szkoła, przedszkole, plac zabaw. Zdejmij nogę z gazu i obserwuj pobocza oraz przejścia.'},
+ {id:'a16',name:'A-16 „przejście dla pieszych”',cat:'ostrzegawczy',svg:SVGHEAD+poly('100,26 176,170 24,170','#facc15','#0f172a')+'<path d="M58 160 L58 122 L80 122 L80 112 L88 98 L104 98 L112 110 L130 110 L130 160 Z" fill="#0f172a"/>'+g(84,94,8,'#0f172a','#0f172a')+SVGE,
+  desc:'Żółty trójkąt z sylwetką pieszego na pasach.',act:'Zbliżasz się do przejścia — zwolnij i obserwuj przejście oraz chodniki. Pieszy na przejściu ma pierwszeństwo.'},
+ {id:'a30',name:'A-30 „inne niebezpieczeństwo”',cat:'ostrzegawczy',svg:SVGHEAD+poly('100,26 176,170 24,170','#facc15','#0f172a')+txt(100,146,'!',72)+SVGE,
+  desc:'Żółty trójkąt z wykrzyknikiem.',act:'Nieokreślone niebezpieczeństwo — zwykle z tabliczką opisującą, na co uważać. Jedziesz ostrożnie.'},
+ {id:'b35',name:'B-35 „zakaz postoju”',cat:'zakaz',svg:SVGHEAD+g(100,100,82,'#1e40af','#dc2626')+'<line x1="42" y1="42" x2="158" y2="158" stroke="#dc2626" stroke-width="11"/>'+SVGE,
+  desc:'Niebieska tarcza z czerwoną obwódką i jednym ukośnym pasem.',act:'Nie wolno postoju — krótkie zatrzymanie jest dozwolone, postój nie.'},
+ {id:'d15',name:'D-15 „przystanek autobusowy”',cat:'strefa',svg:SVGHEAD+'<rect x="18" y="46" width="164" height="108" rx="12" fill="#1d4ed8"/>'+txt(100,124,'🚌',60,'#fff')+SVGE,
+  desc:'Niebieska tablica z autobusem.',act:'Zatrzymywanie poza autobusami zabronione. Uważaj na pieszych wchodzących zza autobusu — klasyk Łomży.'},
+ {id:'a18',name:'A-18a „zwężenie jezdni”',cat:'ostrzegawczy',svg:SVGHEAD+poly('100,26 176,170 24,170','#facc15','#0f172a')+'<path d="M70 160 L70 100 L84 100 L84 160 Z" fill="#0f172a"/><path d="M116 160 L116 100 L130 100 L130 160 Z" fill="#0f172a"/>'+SVGE,
+  desc:'Żółty trójkąt z dwoma zwężającymi się pasami.',act:'Zwężenie jezdni — ustępujesz tym, którzy są już na zwężeniu, i jedziesz ostrożnie.'},
+ {id:'t6',name:'T-6a „tabliczka: droga z pierwszeństwem skręca w prawo”',cat:'pierwszenstwo',svg:SVGHEAD+'<rect x="84" y="50" width="32" height="110" rx="6" fill="#1d4ed8" stroke="#fff" stroke-width="4"/><path d="M100 150 L100 80 L140 80" stroke="#fff" stroke-width="9" fill="none"/><path d="M132 66 L152 80 L132 94 Z" fill="#fff"/>'+SVGE,
+  desc:'Niebieska tabliczka z białą strzałką skręcającą w prawo.',act:'Droga z pierwszeństwem skręca w prawo. Jeśli jedziesz prosto, wjeżdżasz na drogę podporządkowaną — musisz ustąpić!'}
+];
+const LIMITS=[
+ ['Obszar zabudowany (D-42)','50 km/h — całodobowo'],
+ ['Strefa zamieszkania (D-40)','20 km/h, pieszy ma pierwszeństwo na całej jezdni'],
+ ['Strefa ograniczonej prędkości (B-43)','tyle, ile na znaku — nie odwołuje jej skrzyżowanie'],
+ ['Poza obszarem zabudowanym, jednojezdniowa','90 km/h'],
+ ['Poza obszarem zabudowanym, dwujezdniowa','100 km/h'],
+ ['Droga ekspresowa dwujezdniowa','140 km/h (jeśli znak pozwala)'],
+ ['Autostrada','120 km/h'],
+ ['Holowanie przyczepy / przewóz osób','50 / 70 / 80 km/h wg drogi'],
+ ['Motocykl / motorower','90 / 100 / 120 / 140 wg drogi (motorower 45 km/h)'],
+ ['Okres próbny (pierwsze 12 mies.)','50 / 70 / 80 km/h wg drogi']
+];
+
+/* ================== PLAN ================== */
+const PLAN=[
+ ['16.10 (pt)','Diagnoza — 2 godz. Poznanie auta, sprzęgło, spokojna jazda po Łomży, ustalenie z instruktorem 2–3 najważniejszych trudności. Wieczorem odpoczynek.'],
+ ['17.10 (sb)','2,5 godz. — 60 min ruszanie i zmiana biegów (obroty 2000) + 30 min przerwy + 90 min znaki i proste skrzyżowania. Zapisz maks. 3 rzeczy do poprawy.'],
+ ['18.10 (nd)','2,5 godz. — skrzyżowania i pierwszeństwo (równorzędne) oraz skręty, potem ronda i wybór pasa.'],
+ ['19.10 (pn)','2,5 godz. — powtórka najtrudniejszych skrzyżowań, strefy 30, ograniczenia, manewry. Instruktor stopniowo ogranicza podpowiedzi.'],
+ ['20.10 (wt)','2,5 godz. — zadania egzaminacyjne i manewry, potem możliwie samodzielna jazda próbna. Omów błędy i ich przyczyny.'],
+ ['21.10 (śr)','2,5 godz. — spokojna powtórka dwóch najtrudniejszych zagadnień + końcowa jazda próbna. Wieczorem: dokumenty, posiłek, sen.'],
+ ['22.10 (czw)','🎯 EGZAMIN. Śniadanie, zapas czasu, spokojnie ustaw fotel, lusterka i pas.']
+];
+const READY=[
+ 'r1|Potrafię ruszyć bez żabki i bez gaśnięcia — także pod górkę.',
+ 'r2|Zmieniam biegi bez patrzenia na drążek i wiem, kiedy zmieniać (obroty).',
+ 'r3|Wykonuję sekwencję LEWO → PRAWO → LEWO przy każdym wyjeździe z podporządkowanej.',
+ 'r4|Wiem, którym pasem wjeżdżam na rondo i którym zjeżdżam — bez zastanawiania się na rondzie.',
+ 'r5|Rozpoznaję strefę 30 i wiem, że nie odwołuje jej skrzyżowanie.',
+ 'r6|Zatrzymuję się całkowicie przy STOP-ie, w dobrym miejscu.',
+ 'r7|Czytam znak z wyprzedzeniem i podejmuję decyzję, zanim dojadę do skrzyżowania.',
+ 'r8|Wiem, gdzie patrzeć na prędkościomierz, i nie przekraczam 50 km/h.',
+ 'r9|Potrafię przejechać blok bez rozmowy z instruktorem.',
+ 'r10|W ostatniej jeździe próbnej instruktor interweniował rzadko.'
+];
+
+/* ================== STAN ================== */
+const LS_ENTRIES='zpj_entries_v1', LS_READY='zpj_ready_v1', LS_WEAK='zpj_weak_v1', LS_TIMER='zpj_timer_v1', LS_SIGNSTAT='zpj_signstat_v1', LS_ERRTOT='zpj_errtotal_v1', LS_SITTOT='zpj_sittot_v1';
+const readJSON=(k,def)=>{try{const v=JSON.parse(localStorage.getItem(k));return v===null||v===undefined?def:v;}catch(e){return def;}};
+let entries=readJSON(LS_ENTRIES,[]);
+let readyState=readJSON(LS_READY,{});
+let weakState=readJSON(LS_WEAK,{});
+let timerState=readJSON(LS_TIMER,{running:false,startedAt:0,accum:0,total:0});
+let signStat=readJSON(LS_SIGNSTAT,{});
+let errTotal=readJSON(LS_ERRTOT,{});
+let sitFailTotal=readJSON(LS_SITTOT,{total:0,types:{}});
+const saveAll=()=>{
+  localStorage.setItem(LS_ENTRIES,JSON.stringify(entries));
+  localStorage.setItem(LS_READY,JSON.stringify(readyState));
+  localStorage.setItem(LS_WEAK,JSON.stringify(weakState));
+  localStorage.setItem(LS_TIMER,JSON.stringify(timerState));
+  localStorage.setItem(LS_SIGNSTAT,JSON.stringify(signStat));
+  localStorage.setItem(LS_ERRTOT,JSON.stringify(errTotal));
+  localStorage.setItem(LS_SITTOT,JSON.stringify(sitFailTotal));
+};
+const $=id=>document.getElementById(id);
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200);}
+function computeWeak(){
+  const w={};AREAS.forEach(a=>w[a.id]=0);
+  entries.slice(0,5).forEach((e,idx)=>{
+    const weight=Math.max(1,5-idx);
+    Object.keys(e.skills||{}).forEach(k=>{
+      const r=e.skills[k];
+      if(r==='bad')w[k]=(w[k]||0)+2*weight;
+      else if(r==='medium')w[k]=(w[k]||0)+1*weight;
+    });
+  });
+  return w;
+}
+function weakAreaList(){const w=computeWeak();return Object.keys(w).filter(k=>w[k]>0).sort((a,b)=>w[b]-w[a]);}
+function latestEntry(){return entries.length?entries[0]:null;}
+/* ================== TABS ================== */
+document.querySelectorAll('.nb').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(x=>x.classList.remove('active'));
+  $('tab-'+b.dataset.t).classList.add('active');
+  b.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  if(b.dataset.t==='quiz')renderQuiz();
+  if(b.dataset.t==='cwiczenia')renderTasks();
+  if(b.dataset.t==='znaki')renderSign();
+  if(b.dataset.t==='plan')renderPlan();
+  if(b.dataset.t==='bledy')renderErrors();
+}));
+
+/* ================== DZIENNIK ================== */
+let overall='medium';
+const skillSel={};
+const grid=$('skillGrid');
+AREAS.forEach(a=>{
+  skillSel[a.id]='';
+  const d=document.createElement('div');
+  d.style.marginBottom='10px';
+  d.innerHTML='<div style="font-size:.8rem;font-weight:600;margin-bottom:5px">'+a.name+'</div>'+
+    '<div class="rg" data-area="'+a.id+'">'+
+      '<div class="btn-r" data-v="good">Dobrze</div>'+
+      '<div class="btn-r" data-v="medium">W miarę</div>'+
+      '<div class="btn-r" data-v="bad">Do poprawy</div>'+
+    '</div>';
+  grid.appendChild(d);
+});
+function paintGroup(group,value){
+  group.querySelectorAll('.btn-r').forEach(b=>{
+    b.className='btn-r';
+    if(b.dataset.v===value)b.classList.add(value==='good'?'g':value==='medium'?'m':'b');
+  });
+}
+$('overallGrid').addEventListener('click',e=>{
+  const b=e.target.closest('.btn-r');if(!b)return;
+  overall=b.dataset.v;paintGroup($('overallGrid'),overall);
+});
+grid.addEventListener('click',e=>{
+  const b=e.target.closest('.btn-r');if(!b)return;
+  const area=b.closest('.rg').dataset.area;
+  skillSel[area]=b.dataset.v;
+  paintGroup(b.closest('.rg'),b.dataset.v);
+});
+paintGroup($('overallGrid'),overall);
+
+/* --- lista błędów: licznik --- */
+const errCounts={};
+const errGrid=$('errGrid');
+ERRORS.forEach(er=>{
+  errCounts[er.id]=0;
+  const row=document.createElement('div');
+  row.className='err-row';
+  row.innerHTML='<span style="flex:1">'+er.name+'</span>'+
+    '<span class="cnt"><button data-e="-1" data-id="'+er.id+'">−</button><b id="cnt-'+er.id+'">0</b><button data-e="1" data-id="'+er.id+'">+</button></span>';
+  errGrid.appendChild(row);
+});
+function bumpErr(id,d){
+  errCounts[id]=Math.max(0,(errCounts[id]||0)+d);
+  const el=$('cnt-'+id); if(el)el.textContent=errCounts[id];
+}
+errGrid.addEventListener('click',function(e){
+  const b=e.target.closest('button[data-e]');if(!b)return;
+  e.preventDefault();e.stopPropagation();
+  bumpErr(b.dataset.id,+b.dataset.e);
+},false);
+
+/* --- rozmowa z instruktorem --- */
+const TALKS=[['none','Cisza'],['low','Mało'],['med','Średnio'],['high','Dużo gadania']];
+let talk='none';
+const talkBox=$('talkSeg');
+TALKS.forEach(t=>{
+  const p=document.createElement('div');
+  p.className='pill cool'+(t[0]===talk?' on':'');
+  p.textContent=t[1];p.dataset.v=t[0];
+  talkBox.appendChild(p);
+});
+talkBox.addEventListener('click',e=>{
+  const p=e.target.closest('.pill');if(!p)return;
+  talk=p.dataset.v;
+  talkBox.querySelectorAll('.pill').forEach(x=>x.classList.toggle('on',x.dataset.v===talk));
+});
+
+/* --- sytuacje nieprzewidziane --- */
+const SITS=[['pieszy','Pieszy'],['dziecko','Dziecko'],['rowerzysta','Rowerzysta'],['hulajnoga','Hulajnoga'],['zwierzak','Zwierzak'],['inne','Inne auto'],['nic','Nic się nie stało']];
+let sitHandled=[],sitFailed=[];
+function buildPills(box,arr){
+  box.innerHTML=SITS.map(s=>'<div class="pill hot'+(arr.indexOf(s[0])>-1?' on':'')+'" data-v="'+s[0]+'">'+s[1]+'</div>').join('');
+}
+function renderSituations(){
+  buildPills($('sitHandled'),sitHandled);
+  buildPills($('sitFailed'),sitFailed);
+}
+function togglePill(box,arr,val){
+  const idx=arr.indexOf(val);
+  if(idx>-1)arr.splice(idx,1);else arr.push(val);
+  box.querySelectorAll('.pill').forEach(x=>x.classList.toggle('on',arr.indexOf(x.dataset.v)>-1));
+}
+$('sitHandled').addEventListener('click',e=>{const p=e.target.closest('.pill');if(!p)return;togglePill($('sitHandled'),sitHandled,p.dataset.v);});
+$('sitFailed').addEventListener('click',e=>{const p=e.target.closest('.pill');if(!p)return;togglePill($('sitFailed'),sitFailed,p.dataset.v);});
+
+/* --- jakość jazdy --- */
+const QUALS=[['plynna','Płynna'],['zabka','Była żabka / szarpanie'],['hamulce','Musiałam dać po hamulcach'],['gaz','Za dużo gazu'],['gaz-min','Gaz i hamulec bardzo delikatnie'],['biegi-gracja','Biegi z gracją, bez patrzenia'],['biegi-opozn','Biegi za wolno / za późno'],['sprzeglo-g','Sprzęgło wyczute']];
+let quals=[];
+$('qualGrid').innerHTML=QUALS.map(q=>'<div class="pill" data-v="'+q[0]+'">'+q[1]+'</div>').join('');
+$('qualGrid').addEventListener('click',e=>{
+  const p=e.target.closest('.pill');if(!p)return;
+  const v=p.dataset.v,i=quals.indexOf(v);
+  if(i>-1)quals.splice(i,1);else quals.push(v);
+  p.classList.toggle('on',i===-1);
+});
+
+/* --- podsumowanie wyliczane --- */
+function calcErrs(){
+  const total=Object.keys(errCounts).reduce((s,k)=>s+errCounts[k],0);
+  return {total:total,counts:errCounts};
+}
+function errSummaryText(){
+  const e=calcErrs();
+  const list=ERRORS.filter(x=>errCounts[x.id]>0).map(x=>x.name+' ×'+errCounts[x.id]).join(', ');
+  return list||'bez błędów';
+}
+function qualBad(){
+  return quals.filter(q=>['zabka','hamulce','gaz','biegi-opozn'].indexOf(q)>-1);
+}
+function calcFreq(){
+  const entriesWithSit=entries.filter(e=>e.sits&&e.sits.total>0);
+  const all=entriesWithSit.reduce((s,e)=>s+e.sits.total,0);
+  const failed=entriesWithSit.reduce((s,e)=>s+e.sits.len,0);
+  const single={};
+  entriesWithSit.forEach(e=>{e.sits.types.forEach(t=>{single[t]=(single[t]||0)+1;});});
+  return {all:all,failed:failed,single:single,jazd:entriesWithSit.length};
+}
+
+$('driveForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const skills={};Object.keys(skillSel).forEach(k=>{if(skillSel[k])skills[k]=skillSel[k];});
+  const badQuals=qualBad();
+  const entry={
+    id:Date.now(),
+    date:$('fDate').value||new Date().toISOString().slice(0,10),
+    hours:parseFloat($('fHours').value)||0,
+    overall:overall,
+    skills:skills,
+    errs:Object.assign({},errCounts),
+    talk:talk,
+    sits:{total:sitHandled.length+sitFailed.length,len:sitFailed.length,types:sitHandled.concat(sitFailed)},
+    handled:sitHandled.slice(),
+    failed:sitFailed.slice(),
+    quals:quals.slice(),
+    route:$('fRoute').value.trim(),
+    good:$('fGood').value.trim(),
+    minus:$('fMinus').value.trim(),
+    desc:$('fDesc').value.trim(),
+    bad:$('fBad').value.trim(),
+    next:$('fNext').value.trim()
+  };
+  entries.unshift(entry);
+
+  // aktualizacja słabych obszarów
+  Object.keys(skills).forEach(k=>{
+    if(skills[k]==='bad')weakState[k]=(weakState[k]||0)+2;
+    else if(skills[k]==='medium')weakState[k]=(weakState[k]||0)+1;
+  });
+  // błędy z licznikami i jakość dokładają wagi do obszarów
+  ERROR_AREAS.forEach(m=>{ if(errCounts[m[0]]>0) weakState[m[1]]=(weakState[m[1]]||0)+errCounts[m[0]]; });
+  if(badQuals.indexOf('biegi-opozn')>-1)weakState.gears=(weakState.gears||0)+1;
+  if(badQuals.indexOf('zabka')>-1)weakState.clutch=(weakState.clutch||0)+1;
+  // globalna statystyka błędów
+  Object.keys(errCounts).forEach(k=>{ if(errCounts[k]>0)errTotal[k]=(errTotal[k]||0)+errCounts[k]; });
+  if(sitFailed.length){ sitFailTotal.total=(sitFailTotal.total||0)+sitFailed.length; sitFailed.forEach(t=>{sitFailTotal.types[t]=(sitFailTotal.types[t]||0)+1;}); }
+  saveAll();
+
+  // reset formularza (data, godziny i trasa zostają — zwykle wypełniasz kolejny dzień ręcznie)
+  $('fGood').value='';$('fMinus').value='';$('fBad').value='';$('fDesc').value='';$('fNext').value='';
+  Object.keys(skillSel).forEach(k=>{skillSel[k]='';paintGroup(grid.querySelector('[data-area="'+k+'"]'),'');});
+  Object.keys(errCounts).forEach(k=>{errCounts[k]=0;$('cnt-'+k).textContent='0';});
+  talk='none';talkBox.querySelectorAll('.pill').forEach(x=>x.classList.toggle('on',x.dataset.v==='none'));
+  sitHandled=[];sitFailed=[];renderSituations();
+  quals=[];$('qualGrid').querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));
+
+  renderHistory();renderStats();renderReco(entry);renderTasks();renderQuiz();renderErrors();
+  toast('Jazda zapisana ✔');
+});
+renderSituations();
+
+function renderReco(entry){
+  const bad=Object.keys(entry.skills||{}).filter(k=>entry.skills[k]==='bad');
+  const hot=ERR_RECO.filter(r=>entry.errs&&entry.errs[r.err]>0);
+  const card=$('recoCard');
+  if(!bad.length&&!hot.length){card.style.display='none';return;}
+  card.style.display='block';
+  let html='';
+  hot.forEach(r=>{
+    html+='<div class="box warn" style="margin-bottom:8px"><b>⚠️ '+errName(r.err)+' ('+entry.errs[r.err]+'×)</b><br>'+r.tip+'</div>';
+  });
+  bad.forEach(a=>{
+    const list=TASKS.filter(t=>t.area===a).slice(0,2);
+    html+='<div style="margin-bottom:10px"><b style="font-size:.84rem;color:var(--peach-d)">🎯 '+areaName(a)+'</b>'+
+      list.map(t=>'<div class="box" style="margin-top:6px"><b>'+t.title+'</b><br>'+t.desc+'</div>').join('')+'</div>';
+  });
+  $('recoList').innerHTML=html;
+}
+
+/* ================== HISTORIA / STATYSTYKI ================== */
+function renderHistory(){
+  const c=$('history');
+  if(!entries.length){c.innerHTML='<div class="empty">Brak wpisów. Zapisz pierwszą jazdę — nawet krótko.</div>';return;}
+  c.innerHTML=entries.map(e=>{
+    const chips=Object.keys(e.skills||{}).map(k=>{
+      const r=e.skills[k];
+      return '<span class="chip '+(r==='bad'?'b':r==='medium'?'m':'')+'">'+areaName(k)+' · '+RLAB[r]+'</span>';
+    }).join('');
+    const errs=ERRORS.filter(x=>e.errs&&e.errs[x.id]>0).map(x=>'<span class="chip b">'+x.name+' ×'+e.errs[x.id]+'</span>').join('');
+    const qual=(e.quals||[]).map(q=>'<span class="chip '+(['zabka','hamulce','gaz','biegi-opozn'].indexOf(q)>-1?'b':'')+'">'+qualName(q)+'</span>').join('');
+    const talkTxt=e.talk&&e.talk!=='none'?'<span class="chip m">🗣️ '+talkName(e.talk)+'</span>':'';
+    let sitTxt='';
+    if(e.sits&&e.sits.total){
+      const h=(e.handled||[]).map(sitName).join(', ');
+      const f=(e.failed||[]).map(sitName).join(', ');
+      sitTxt='<div class="mt">🚧 Sytuacje: '+e.sits.total+' ('+e.sits.len+' nie wyszło)'+(h?'<br>✔️ wybrnęłam z: '+h:'')+(f?'<br>✖️ nie wybrnęłam z: '+f:'')+'</div>';
+    }
+    return '<div class="entry"><div class="entry-top"><span>📅 '+e.date+' · '+e.hours+' h'+(e.route?' · '+e.route:'')+'</span>'+
+      '<span class="badge '+(e.overall==='good'?'bg-g':e.overall==='medium'?'bg-m':'bg-b')+'">'+RLAB[e.overall]+'</span></div>'+
+      ((chips||errs||qual||talkTxt)?'<div class="chips">'+chips+errs+qual+talkTxt+'</div>':'')+
+      sitTxt+
+      (e.good?'<div class="mt" style="color:var(--green-d)">✔️ <b>Plusy:</b> '+e.good+'</div>':'')+
+      (e.minus?'<div class="mt" style="color:var(--peach-d)">✖️ <b>Minusy:</b> '+e.minus+'</div>':'')+
+      (e.bad?'<div class="mt" style="color:var(--peach-d)">🙋 <b>Podpowiedzi instruktora:</b> '+e.bad+'</div>':'')+
+      (e.desc?'<div class="mt" style="margin-top:9px;padding-top:9px;border-top:1px dashed var(--border)">📖 '+e.desc+'</div>':'')+
+      (e.next?'<div class="mt">🎯 Cel: '+e.next+'</div>':'')+
+      '<button class="btn-sm" data-del="'+e.id+'" style="margin-top:8px;border-color:var(--peach-d);color:var(--peach-d)">Usuń wpis</button>'+
+    '</div>';
+  }).join('');
+}
+$('history').addEventListener('click',e=>{
+  const b=e.target.closest('[data-del]');if(!b)return;
+  if(!confirm('Usunąć ten wpis?'))return;
+  entries=entries.filter(x=>String(x.id)!==b.dataset.del);
+  errTotal={};sitFailTotal={types:{}};
+  entries.forEach(e=>{Object.keys(e.errs||{}).forEach(k=>{if(e.errs[k]>0)errTotal[k]=(errTotal[k]||0)+e.errs[k];});
+    if(e.failed&&e.failed.length){sitFailTotal.total=(sitFailTotal.total||0)+e.failed.length;e.failed.forEach(t=>{sitFailTotal.types[t]=(sitFailTotal.types[t]||0)+1;});}});
+  saveAll();renderHistory();renderStats();renderTasks();renderQuiz();renderErrors();
+  toast('Wpis usunięty');
+});
+
+function renderStats(){
+  const hrs=entries.reduce((s,e)=>s+(e.hours||0),0);
+  $('headerSub').textContent='Wpisy: '+entries.length+' · godziny: '+hrs+' h';
+  const box=$('progressBox');
+  if(!entries.length){box.innerHTML='<div class="empty">Zapisz pierwszą jazdę, żeby zobaczyć analizę.</div>';return;}
+  const last=entries[0];
+  const sit=calcFreq();
+  const badQuals=qualBad();
+  const totalErrsAll=Object.keys(errTotal).reduce((s,k)=>s+(errTotal[k]||0),0);
+  let html='<div class="stats">'+
+    '<div class="stat"><b>'+hrs+'</b><span>godzin w dzienniku</span></div>'+
+    '<div class="stat"><b>'+totalErrsAll+'</b><span>błędów łącznie</span></div>'+
+    '<div class="stat"><b>'+(sit.all?sit.failed+' / '+sit.all:'0')+'</b><span>sytuacje: nie wybrnęłam / wszystkie</span></div>'+
+  '</div>';
+  html+='<div class="box '+(last.overall==='good'?'ok':last.overall==='bad'?'stop':'warn')+'"><b>Ostatnia jazda ('+last.date+', '+last.hours+' h):</b> '+RLAB[last.overall]+
+    (last.talk?' · rozmowa: '+talkName(last.talk).toLowerCase():'')+
+    (last.minus?'<br><b>Nowe minusy:</b> '+last.minus:'')+
+    (last.next?'<br><b>Cel:</b> '+last.next:'')+'</div>';
+
+  // nowe minusy vs poprzednie wpisy — proste porównanie słów kluczowych
+  if(entries.length>=2&&last.minus){
+    const norm=s=>s.toLowerCase().replace(/[^a-ząćęłńóśźż0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>4);
+    const now=norm(last.minus);
+    const before=new Set();
+    entries.slice(1,5).forEach(e=>{if(e.minus)norm(e.minus).forEach(w=>before.add(w));});
+    const fresh=now.filter(w=>!before.has(w));
+    if(fresh.length)html+='<div class="box warn"><b>🆕 Pojawiło się nowe:</b> '+[...new Set(fresh)].join(', ')+' — to nowy temat, wcześniej go nie zgłaszałaś.</div>';
+  }
+  // czy błędy spadają
+  if(entries.length>=3){
+    const sumErrs=a=>a.reduce((s,e)=>s+Object.values(e.errs||{}).reduce((x,y)=>x+y,0),0);
+    const now=sumErrs(entries.slice(0,2)), before=sumErrs(entries.slice(2,5));
+    if(now<before)html+='<div class="box ok"><b>📉 Błędów mniej:</b> w ostatnich 2 jazdach '+now+', wcześniej '+before+'.</div>';
+    else if(now>before)html+='<div class="box warn"><b>📈 Błędów więcej:</b> w ostatnich 2 jazdach '+now+', wcześniej '+before+'. Sprawdź, czy nie nakładają się na to zmęczenie albo rozmowa w aucie.</div>';
+  }
+  // ostatni opis sesji
+  const withDesc=entries.find(e=>e.desc);
+  if(withDesc)html+='<details style="margin-top:12px"><summary>📖 Twój ostatni opis jazdy ('+withDesc.date+')</summary><p>'+withDesc.desc+'</p></details>';
+
+  // trendy
+  if(entries.length>=3){
+    const older=entries.slice(1,4);
+    const olderTalk=older.filter(e=>e.talk&&e.talk!=='none').length;
+    const nowTalk=last.talk&&last.talk!=='none'?1:0;
+    if(olderTalk>nowTalk)html+='<div class="box ok"><b>📈 Mniej rozmowy za kierownicą.</b> W ostatniej jeździe: '+talkName(last.talk)+' — wcześniej częściej.</div>';
+    else if(nowTalk&&olderTalk<=nowTalk)html+='<div class="box warn"><b>🗣️ Rozmowa w aucie.</b> W ostatniej jeździe: '+talkName(last.talk)+'. Spróbuj jednej jazdy w ciszy — sama sprawdzisz, czy błędy znikają.</div>';
+  }
+  const totalErrs=Object.keys(errTotal).reduce((s,k)=>s+(errTotal[k]||0),0);
+  if(totalErrs){
+    const top=Object.keys(errTotal).sort((a,b)=>errTotal[b]-errTotal[a]).slice(0,4);
+    html+='<div style="font-size:.8rem;font-weight:600;margin:12px 0 6px">Twoje najczęstsze błędy (wszystkie jazdy):</div>'+
+      top.map(k=>'<div class="err-row"><span>'+errName(k)+'</span><span class="badge bg-b">'+errTotal[k]+'×</span></div>').join('');
+  }
+  if(sit.all){
+    html+='<div style="font-size:.8rem;font-weight:600;margin:12px 0 6px">Sytuacje nieprzewidziane:</div>'+
+      '<div class="box">Razem <b>'+sit.all+'</b> — wybrnęłaś z <b>'+(sit.all-sit.failed)+'</b>, nie z <b>'+sit.failed+'</b>.'+
+      (Object.keys(sit.single).length?'<br>'+Object.keys(sit.single).map(k=>sitName(k)+': '+sit.single[k]).join(' · '):'')+'</div>';
+  }
+  const w=computeWeak();
+  const rows=Object.keys(w).filter(k=>w[k]>0).sort((x,y)=>w[y]-w[x]).slice(0,4);
+  if(rows.length)html+='<div style="font-size:.8rem;font-weight:600;margin:12px 0 6px">Twoje słabe obszary:</div>'+
+    rows.map(k=>'<div class="err-row"><span>'+areaName(k)+'</span><span class="badge bg-m">priorytet</span></div>').join('');
+  box.innerHTML=html;
+}
+
+/* ================== TIMER ================== */
+let tick=null;
+function fmt(ms){const s=Math.floor(ms/1000);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+function elapsed(){return timerState.accum+(timerState.running?Date.now()-timerState.startedAt:0);}
+function paintTimer(){
+  $('timerDisp').textContent=fmt(elapsed());
+  $('btnStart').textContent=timerState.running?'Pauza':'Start';
+  $('timerTotal').textContent='Łącznie ze stopera: '+(timerState.total/3600000).toFixed(2).replace('.',',')+' h'+(timerState.running?' (stoper pracuje…)':'');
+}
+$('btnStart').addEventListener('click',()=>{
+  if(timerState.running){timerState.accum+=Date.now()-timerState.startedAt;timerState.running=false;timerState.total+=timerState.accum;timerState.accum=0;}
+  else{timerState.running=true;timerState.startedAt=Date.now();}
+  saveAll();paintTimer();
+});
+$('btnReset').addEventListener('click',()=>{
+  if(timerState.running&&timerState.accum>0){timerState.total+=timerState.accum;}
+  else if(timerState.running){timerState.total+=Date.now()-timerState.startedAt;}
+  timerState={running:false,startedAt:0,accum:0,total:timerState.total};
+  saveAll();paintTimer();toast('Stoper wyzerowany');
+});
+function startTick(){ if(tick)clearInterval(tick); paintTimer();
+  tick=setInterval(()=>{if(timerState.running)$('timerDisp').textContent=fmt(elapsed());},1000);
+}
+
+/* ================== KOPIA DANYCH ================== */
+$('btnExport').addEventListener('click',()=>{
+  const blob=new Blob([JSON.stringify({entries:entries,ready:readyState,weak:weakState,sign:signStat,errTotal:errTotal,sitFailTotal:sitFailTotal},null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='prawko-kopia-'+new Date().toISOString().slice(0,10)+'.json';a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  toast('Kopia zapisana 📤');
+});
+$('btnImport').addEventListener('click',()=>$('fileInput').click());
+$('fileInput').addEventListener('change',ev=>{
+  const f=ev.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=()=>{try{
+    const d=JSON.parse(r.result);
+    if(Array.isArray(d.entries))entries=d.entries;
+    if(d.ready)readyState=d.ready;
+    if(d.weak)weakState=d.weak;
+    if(d.sign)signStat=d.sign;
+    if(d.errTotal)errTotal=d.errTotal;
+    if(d.sitFailTotal)sitFailTotal=d.sitFailTotal;
+    saveAll();renderHistory();renderStats();renderTasks();renderQuiz();renderReady();renderSign();renderErrors();
+    toast('Dane wczytane 📥');
+  }catch(err){alert('Nie udało się wczytać pliku.');}};
+  r.readAsText(f);ev.target.value='';
+});
+$('btnWipe').addEventListener('click',()=>{
+  if(!confirm('Usunąć WSZYSTKIE wpisy i oceny? Tej operacji nie da się cofnąć.'))return;
+  entries=[];readyState={};weakState={};signStat={};errTotal={};sitFailTotal={types:{}};saveAll();
+  renderHistory();renderStats();renderTasks();renderQuiz();renderReady();renderSign();renderErrors();
+  $('recoCard').style.display='none';
+  toast('Wyczyszczono');
+});
+
+/* ================== ĆWICZENIA ================== */
+let taskFilter='all';
+function renderTaskFilters(){
+  const opts=[['all','Wszystko']].concat(AREAS.map(a=>[a.id,a.name]));
+  $('taskFilters').innerHTML=opts.map(o=>'<div class="fchip'+(taskFilter===o[0]?' on':'')+'" data-f="'+o[0]+'">'+o[1]+'</div>').join('');
+}
+$('taskFilters').addEventListener('click',e=>{
+  const c=e.target.closest('.fchip');if(!c)return;
+  taskFilter=c.dataset.f;renderTaskFilters();renderTasks();
+});
+function weakNow(){const out={};AREAS.forEach(a=>{out[a.id]=(weakState[a.id]||0)>0;});return out;}
+function renderTasks(){
+  renderTaskFilters();
+  const weak=weakNow();
+  const onlyWeak=$('onlyWeak').checked;
+  const top=weakAreaList().slice(0,3);
+  const band=$('priorityBand');
+  if(top.length){
+    const l=latestEntry();
+    const hotErr=Object.keys(errTotal).sort((a,b)=>errTotal[b]-errTotal[a]).slice(0,2).filter(k=>k);
+    band.innerHTML='<div class="box warn"><b>🎯 Priorytet na najbliższą jazdę:</b><br>'+
+      top.map(k=>'• '+areaName(k)).join('<br>')+
+      (hotErr.length?'<br><br><b>Najczęstsze błędy do wyeliminowania:</b><br>'+hotErr.map(k=>'• '+errName(k)+' ('+errTotal[k]+'×)').join('<br>'):'')+
+      (l&&l.next?'<br><br><b>Twój cel z ostatniego wpisu:</b> '+l.next:'')+'</div>';
+  }else{
+    band.innerHTML='<div class="box">Zaznacz w dzienniku obszary „do poprawy” i policz błędy, a tutaj od razu pojawią się dopasowane ćwiczenia.</div>';
+  }
+  // zadania z banku błędów — na samą górę
+  let hot='';
+  ERR_RECO.forEach(r=>{
+    const n=errTotal[r.err]||0;if(!n)return;
+    hot+='<div class="task" style="border-left-color:var(--peach-d)"><h4>'+errName(r.err)+' <span class="chip b" style="font-weight:600">'+n+'× w dzienniku</span></h4>'+
+      '<p>'+r.tip+'</p></div>';
+  });
+  let list=TASKS.filter(t=>taskFilter==='all'||t.area===taskFilter);
+  if(onlyWeak)list=list.filter(t=>weak[t.area]);
+  const w=computeWeak();
+  list=list.slice().sort((a,b)=>(w[b.area]||0)-(w[a.area]||0));
+  $('taskList').innerHTML=hot+(list.length?list.map(t=>'<div class="task"><h4>'+t.title+' <span class="chip'+(weak[t.area]?' b':'')+'" style="font-weight:600">'+areaName(t.area)+'</span></h4>'+
+    '<p>'+t.desc+'</p><div class="why">💡 Dlaczego: '+t.why+'</div><div class="do">▶️ Do zrobienia: '+t.doNow+'</div></div>').join(''):'<div class="empty">Brak ćwiczeń dla tego filtra.</div>');
+}
+$('onlyWeak').addEventListener('change',renderTasks);
+
+/* ================== BŁĘDY I SYTUACJE (zakładka) ================== */
+function renderErrors(){
+  const box=$('errSummary');
+  if(!entries.length){box.innerHTML='Zapisz jazdę w dzienniku, żeby zobaczyć podsumowanie.';}
+  else{
+    const sit=calcFreq();
+    const tot=Object.keys(errTotal).reduce((s,k)=>s+(errTotal[k]||0),0);
+    const last=entries[0];
+    let h='<div class="stats">'+
+      '<div class="stat"><b>'+tot+'</b><span>błędów łącznie</span></div>'+
+      '<div class="stat"><b>'+(last.talk?talkName(last.talk):'—')+'</b><span>rozmowa (ostatnia jazda)</span></div>'+
+      '<div class="stat"><b>'+(sit.all?sit.failed+' / '+sit.all:'0')+'</b><span>nie wybrnęłam / wszystkie</span></div></div>';
+    if(tot){
+      h+='<div style="font-size:.8rem;font-weight:600;margin:10px 0 4px">Jak często popełniasz który błąd:</div>';
+      h+=Object.keys(errTotal).sort((a,b)=>errTotal[b]-errTotal[a]).map(k=>{
+        const n=errTotal[k],jazd=entries.length,pct=Math.round(n/jazd*100);
+        return '<div class="err-row"><span>'+errName(k)+'</span><span class="badge '+(pct>=50?'bg-b':'bg-m')+'">'+n+'× · w '+pct+'% jazd</span></div>';
+      }).join('');
+    }else h+='<div class="box ok">Zero policzonych błędów. Zaskakująco dobrze.</div>';
+    if(sit.all){
+      const rate=Math.round(sit.failed/sit.all*100);
+      h+='<div style="font-size:.8rem;font-weight:600;margin:14px 0 4px">Sytuacje nieprzewidziane — jak sobie radzisz:</div>'+
+        '<div class="box '+(rate>50?'warn':'ok')+'">'+sit.all+' sytuacji łącznie. Wybrnęłaś z <b>'+(sit.all-sit.failed)+'</b> ('+(100-rate)+'%).'+
+        (Object.keys(sitFailTotal.types||{}).length?'<br>Najtrudniejsze: '+Object.keys(sitFailTotal.types).map(k=>sitName(k)+' ('+sitFailTotal.types[k]+'×)').join(', '):'')+'</div>';
+    }
+    h+='<div style="font-size:.8rem;font-weight:600;margin:14px 0 4px">Jakość jazdy z ostatnich wpisów:</div>';
+    const qualTally={};
+    entries.slice(0,6).forEach(e=>(e.quals||[]).forEach(q=>{qualTally[q]=(qualTally[q]||0)+1;}));
+    h+=Object.keys(qualTally).length
+      ? Object.keys(qualTally).sort((a,b)=>qualTally[b]-qualTally[a]).map(k=>'<div class="err-row"><span>'+qualName(k)+'</span><span class="badge '+((['zabka','hamulce','gaz','biegi-opozn'].indexOf(k)>-1)?'bg-b':'bg-g')+'">'+qualTally[k]+'×</span></div>').join('')
+      : '<div class="note">Zaznacz jakość jazdy w dzienniku, żeby zobaczyć ten wykres.</div>';
+    box.innerHTML=h;
+  }
+  // pełne wyjaśnienia błędów
+  $('errInfo').innerHTML=ERRORS.map(er=>'<details><summary>'+er.name+'</summary><p><b>Dlaczego to błąd:</b> '+er.why+'</p><p><b>Co robić zamiast tego:</b> '+er.fix+'</p></details>').join('');
+}
+
+/* ================== ZNAKI ================== */
+let signFilter='all',signIdx=0,signAnswered=false;
+function renderSignFilters(){
+  const cats=[['all','Wszystko'],['predkosc','Prędkości'],['pierwszenstwo','Pierwszeństwo'],['zakaz','Zakazy'],['ostrzegawczy','Ostrzegawcze'],['strefa','Strefy i info']];
+  const wrong=Object.keys(signStat).filter(k=>signStat[k]&&signStat[k].wrong>0);
+  if(wrong.length)cats.push(['wrong','🔁 Moje pomyłki ('+wrong.length+')']);
+  $('signFilters').innerHTML=cats.map(c=>'<div class="fchip'+(signFilter===c[0]?' on':'')+'" data-f="'+c[0]+'">'+c[1]+'</div>').join('');
+}
+function currentSigns(){
+  if(signFilter==='all')return SIGNS;
+  if(signFilter==='wrong')return SIGNS.filter(s=>signStat[s.id]&&signStat[s.id].wrong>0);
+  return SIGNS.filter(s=>s.cat===signFilter);
+}
+function renderSign(){
+  renderSignFilters();
+  const list=currentSigns();
+  if(!list.length){$('signSvg').innerHTML='<div class="empty">Brak znaków w tym zestawie.</div>';$('signAnswers').innerHTML='';$('signReveal').style.display='none';$('signCounter').textContent='';return;}
+  if(signIdx>=list.length)signIdx=0;
+  const s=list[signIdx];
+  signAnswered=false;
+  $('signSvg').innerHTML=s.svg;
+  $('signPrompt').textContent='Co to za znak i co powinnaś zrobić?';
+  const others=list.filter(x=>x.id!==s.id).sort(()=>Math.random()-.5).slice(0,2).map(x=>x.act);
+  const options=[s.act].concat(others).sort(()=>Math.random()-.5);
+  $('signAnswers').innerHTML=options.map((o,i)=>'<div class="opt" data-ok="'+(o===s.act)+'" data-i="'+i+'">'+o+'</div>').join('');
+  $('signReveal').style.display='none';
+  $('signReveal').innerHTML='<b>'+s.name+'</b><br>'+s.desc+'<br><br><b>Co robisz:</b> '+s.act;
+  $('signFb').className='fb';$('signFb').style.display='none';
+  $('signCounter').textContent='Znak '+(signIdx+1)+' z '+list.length;
+}
+$('signAnswers').addEventListener('click',e=>{
+  const o=e.target.closest('.opt');if(!o||signAnswered)return;
+  signAnswered=true;
+  const list=currentSigns();const s=list[signIdx];
+  const ok=o.dataset.ok==='true';
+  const st=signStat[s.id]||{right:0,wrong:0};
+  if(ok)st.right++;else st.wrong++;
+  signStat[s.id]=st;saveAll();
+  o.classList.add(ok?'ok':'no');
+  $('signFb').className='fb '+(ok?'correct':'incorrect');
+  $('signFb').innerHTML=(ok?'✔️ Dobrze! ':'✖️ Nie to. ')+'<b>'+s.name+'</b><br>'+s.act;
+  $('signReveal').style.display='block';
+  renderSignFilters();
+});
+$('signHint').addEventListener('click',()=>{
+  const s=currentSigns()[signIdx];if(!s)return;
+  $('signReveal').style.display='block';
+  $('signReveal').innerHTML='<b>Podpowiedź:</b> '+s.desc;
+});
+$('signNext').addEventListener('click',()=>{const l=currentSigns();signIdx=(signIdx+1)%l.length;renderSign();});
+$('signPrev').addEventListener('click',()=>{const l=currentSigns();signIdx=(signIdx-1+l.length)%l.length;renderSign();});
+$('signFilters').addEventListener('click',e=>{
+  const c=e.target.closest('.fchip');if(!c)return;
+  signFilter=c.dataset.f;signIdx=0;renderSign();
+});
+function renderLimits(){
+  $('limitsTable').innerHTML=LIMITS.map(r=>'<div style="display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.8rem"><b style="flex:1;color:var(--text)">'+r[0]+'</b><span style="flex:1;text-align:right">'+r[1]+'</span></div>').join('');
+}
+
+/* ================== QUIZ ================== */
+let quizFilter='all',quizAns={},quizOk={};
+function renderQuizFilters(){
+  const cats=[['all','Wszystko'],['weak','🎯 Moje słabe obszary'],['wrong','🔁 Moje pomyłki']].concat(AREAS.map(a=>[a.id,a.name]));
+  $('quizFilters').innerHTML=cats.map(c=>'<div class="fchip'+(quizFilter===c[0]?' on':'')+'" data-f="'+c[0]+'">'+c[1]+'</div>').join('');
+}
+function quizPool(){
+  if(quizFilter==='all')return QUIZ;
+  if(quizFilter==='weak'){const w=weakNow();const l=QUIZ.filter(q=>w[q.area]);return l.length?l:QUIZ;}
+  if(quizFilter==='wrong')return QUIZ.filter(q=>quizAns[q.id]!==undefined&&!quizOk[q.id]);
+  return QUIZ.filter(q=>q.area===quizFilter);
+}
+function currentQuizList(){
+  const pool=quizPool();const w=computeWeak();
+  return pool.slice().sort((a,b)=>(w[b.area]||0)-(w[a.area]||0));
+}
+function renderQuiz(){
+  renderQuizFilters();
+  const info=$('quizInfo');
+  const top=weakAreaList().slice(0,3);
+  if(top.length)info.innerHTML='Pytania ułożone pod Twoje ostatnie jazdy. Na górze tematy: <b>'+top.map(areaName).join(', ')+'</b>.';
+  else info.innerHTML='<b>Pytania są posegregowane</b> według tego, co oznaczysz w dzienniku jako „do poprawy”. Najpierw uzupełnij dziennik — wtedy quiz sam się ułoży pod Ciebie.';
+  const list=currentQuizList();
+  $('quizList').innerHTML=list.map((q,i)=>{
+    const st=quizAns[q.id];
+    return '<div class="quiz"><div class="q">'+(i+1)+'. '+q.q+'</div>'+
+      q.o.map((o,oi)=>{
+        const sel=st!==undefined&&st===oi;
+        return '<div class="opt'+(sel?(quizOk[q.id]?' ok':' no'):'')+'" data-q="'+q.id+'" data-i="'+oi+'">'+o+'</div>';
+      }).join('')+
+      '<div class="fb'+(st!==undefined?(quizOk[q.id]?' correct':' incorrect'):'')+'"'+(st===undefined?'':' style="display:block"')+'>'+
+        (st===undefined?'':(quizOk[q.id]?'✔️ Dobrze. ':'✖️ Nie tak. ')+q.e)+'</div></div>';
+  }).join('')||'<div class="empty">Brak pytań w tym filtrze.</div>';
+  const done=Object.keys(quizAns).length,tot=QUIZ.length,ok=Object.keys(quizOk).filter(k=>quizOk[k]).length;
+  const sc=$('quizScore');
+  if(done>0){sc.style.display='block';sc.innerHTML='Rozwiązane: <b>'+done+'</b> z '+tot+' · poprawne: <b>'+ok+'</b>'+(done>=tot?'<br>Przeszłaś cały zestaw — powtórz pytania z filtra „Moje pomyłki”.':'');}
+  else sc.style.display='none';
+}
+$('quizList').addEventListener('click',e=>{
+  const o=e.target.closest('.opt');if(!o)return;
+  const id=o.dataset.q,i=+o.dataset.i;
+  const q=QUIZ.find(x=>x.id===id);
+  quizAns[id]=i;quizOk[id]=(i===q.a);
+  renderQuiz();
+});
+$('quizFilters').addEventListener('click',e=>{
+  const c=e.target.closest('.fchip');if(!c)return;
+  quizFilter=c.dataset.f;renderQuiz();
+});
+
+/* ================== PLAN ================== */
+function renderPlan(){
+  const today=new Date();const iso=today.toISOString().slice(0,10);
+  const days={'16.10':'2026-10-16','17.10':'2026-10-17','18.10':'2026-10-18','19.10':'2026-10-19','20.10':'2026-10-20','21.10':'2026-10-21','22.10':'2026-10-22'};
+  $('planList').innerHTML=PLAN.map(p=>{
+    const k=p[0].slice(0,5);
+    const now=days[k]===iso;
+    return '<div class="day'+(now?' now':'')+'"><div class="d">'+p[0]+(now?'<br><span style="color:var(--peach-d);font-size:.7rem">DZIŚ</span>':'')+'</div><div class="c">'+p[1]+'</div></div>';
+  }).join('');
+  const exam=new Date('2026-10-22T08:00:00');
+  const diff=Math.ceil((exam-today)/86400000);
+  $('examCountdown').innerHTML=diff>0
+    ? '<b>Do egzaminu: '+diff+' dni.</b><br>Każda jazda ma jeden cel: mniej podpowiedzi instruktora niż poprzednio.'
+    : (diff===0?'<b>Dziś jest egzamin.</b> Powodzenia — jesteś przygotowana tak, jak się dało w tym tygodniu.':'Egzamin: 22.10.2026.');
+  const hrs=entries.reduce((s,e)=>s+(e.hours||0),0);
+  const totalTimer=(timerState.total/3600000).toFixed(2).replace('.',',');
+  $('hoursBox').innerHTML='Wpisane w dzienniku: <b>'+hrs+' h</b> z 15 h jazd doszkalających.<br>Stoper: <b>'+totalTimer+' h</b> łącznie.<br><br>Zaplanowany rozkład: 2 h (16.10) + 5 × 2,5 h = 15 h.';
+  renderReady();
+}
+function renderReady(){
+  $('readyCheck').innerHTML=READY.map(r=>{
+    const parts=r.split('|');const id=parts[0],label=parts[1];
+    return '<label style="display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.82rem;margin-bottom:9px;cursor:pointer">'+
+      '<input type="checkbox" data-r="'+id+'" '+(readyState[id]?'checked':'')+' style="width:auto;margin-top:3px">'+
+      '<span>'+label+'</span></label>';
+  }).join('');
+  const done=READY.filter(r=>readyState[r.split('|')[0]]).length;
+  const pct=Math.round(done/READY.length*100);
+  $('gauge').style.width=pct+'%';
+  let note;
+  if(pct<40)note='Część rzeczy jest jeszcze do wypracowania — to normalne na tym etapie. Skup się na najczęstszych błędach z zakładki „Błędy”.';
+  else if(pct<70)note='Solidny środek. Zostały rzeczy do dopięcia — zaplanuj je jako cele konkretnych jazd, po jednej na lekcję.';
+  else if(pct<90)note='Blisko. W ostatniej jeździe próbnej sprawdź, ile razy instruktor musiał interweniować — to prawdziwy test gotowości.';
+  else note='Wszystkie punkty odhaczone. Pamiętaj: „odhaczone” nie znaczy „zawsze” — powtarzalność liczy się bardziej niż jeden udany przejazd.';
+  note+=' Gdyby 20–21.10 nadal potrzebne były częste interwencje w sprawach bezpieczeństwa, szczera rozmowa z instruktorem o przesunięciu terminu jest rozsądną decyzją, nie porażką.';
+  $('gaugeNote').innerHTML='Wypełnione: <b>'+done+'</b> z '+READY.length+' ('+pct+'%).<br><br>'+note;
+}
+$('readyCheck').addEventListener('change',e=>{
+  const c=e.target.closest('[data-r]');if(!c)return;
+  readyState[c.dataset.r]=c.checked;saveAll();renderReady();
+});
+
+/* ================== BOOT ================== */
+$('fDate').valueAsDate=new Date();
+startTick();
+renderHistory();renderStats();renderTasks();renderQuiz();renderSign();renderLimits();renderPlan();renderErrors();
+if(entries.length)renderReco(entries[0]);
+</script>
+
+<!-- ====== PASEK INSTALACJI ====== -->
+<div id="installBar" style="display:none"></div>
+<script>
+(function(){
+  var ua=navigator.userAgent||'';
+  var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isAndroid=/Android/.test(ua);
+  var isFile=location.protocol==='file:';
+  var bar=document.getElementById('installBar');
+  var KEY='zpj_installbar_hidden';
+  function hide(){bar.style.display='none';}
+  function closeBtn(){
+    var b=document.createElement('button');
+    b.textContent='✕';
+    b.style.cssText='background:rgba(255,255,255,.25);border:none;color:#fff;border-radius:50%;width:26px;height:26px;font-size:.8rem;flex:0 0 auto;cursor:pointer';
+    b.onclick=function(){try{localStorage.setItem(KEY,'1');}catch(e){};hide();};
+    return b;
+  }
+  function show(html){
+    try{if(localStorage.getItem(KEY)==='1')return;}catch(e){}
+    bar.style.cssText='position:sticky;top:0;z-index:500;background:linear-gradient(120deg,#6C4A9E,#8A5FB8,#18B45A);color:#fff;padding:11px 13px;font-size:.79rem;line-height:1.45;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.18)';
+    bar.innerHTML='<div style="flex:1">'+html+'</div>';
+    bar.appendChild(closeBtn());
+  }
+  if(isFile){
+    var stepsIOS='1. Stuknij ikonę <b>Udostępnij</b> (kwadrat ze strzałką).<br>2. Przewiń i wybierz <b>Do ekranu początkowego</b>.<br>3. Nazwij „Prawko” → <b>Dodaj</b>.';
+    var stepsAnd='1. Stuknij <b>⋮</b> w prawym górnym rogu Chrome.<br>2. Wybierz <b>Dodaj do ekranu głównego</b> (w nowszych Chrome: <b>Zainstaluj</b>).<br>3. Nazwij „Prawko” → <b>Dodaj</b>.';
+    var msg;
+    if(isIOS)msg='<b>Aby mieć ikonę na pulpicie:</b><br>'+stepsIOS;
+    else if(isAndroid)msg='<b>Aby mieć ikonę na pulpicie:</b><br>'+stepsAnd;
+    else msg='<b>To urządzenie:</b> otwórz plik na telefonie (wyślij go sobie mailem), żeby dodać ikonę na ekran główny.';
+    msg+='<br><br><span style="opacity:.88">Twoje postępy zapisują się już teraz — po każdym kliknięciu „Zapisz jazdę”.</span>';
+    show(msg);
+  }else{
+    var msg2;
+    if(isIOS)msg2='<b>Zainstaluj na iPhone:</b> stuknij <b>Udostępnij</b> → <b>Do ekranu początkowego</b> → <b>Dodaj</b>.';
+    else msg2='<b>Zainstaluj na Androidzie:</b> stuknij <b>⋮</b> → <b>Zainstaluj</b> (lub <b>Dodaj do ekranu głównego</b>) → <b>Dodaj</b>.';
+    show(msg2+'<br><span style="opacity:.88">Aplikacja działa wtedy offline i otwiera się jednym kliknięciem.</span>');
+  }
+})();
+</script>
+</body>
+</html>
